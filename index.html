@@ -151,7 +151,18 @@ color:white;
 text-align:center;
 padding:100px 40px;
 }
+#request form{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
 
+#request input,
+#request textarea,
+#request select{
+width:100%;
+box-sizing:border-box;
+}
 </style>
 </head>
 
@@ -261,20 +272,42 @@ Request Parts on WhatsApp
 </section>
 
 <section id="request">
-
 <h2>Request a Volvo Part</h2>
 
-<form>
+<form id="partsForm">
 
-<input type="text" placeholder="Your Name" required>
+<label>Choose your Volvo Model:</label><br>
+<select id="model">
+<option>XC90</option>
+<option>XC70</option>
+<option>XC60</option>
+<option>S80</option>
+<option>S60</option>
+<option>S40</option>
+<option>V70</option>
+<option>V40</option>
+<option>C30</option>
+<option>850</option>
+</select>
 
-<input type="text" placeholder="Volvo Model">
+<br><br>
 
-<input type="text" placeholder="Part Needed">
+<label>Enter the Part You Need:</label><br>
+<input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
 
-<textarea placeholder="Additional details"></textarea>
+<br><br>
 
-<button type="submit">Submit Request</button>
+<label>Extra Details:</label><br>
+<textarea id="details" placeholder="Year, engine type, etc"></textarea>
+
+<br><br>
+
+<button type="button" onclick="sendWhatsApp()">
+Request Part on WhatsApp
+</button>
+
+</form>
+</section>
 
 </form>
 
@@ -316,6 +349,24 @@ Western Cape
 <p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
 
 </footer>
+
+<script>
+function sendWhatsApp(){
+
+let model = document.getElementById("model").value;
+let part = document.getElementById("part").value;
+let details = document.getElementById("details").value;
+
+let phone = "27703219420";
+
+let message = "Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: " + model + "%0APart: " + part + "%0ADetails: " + details;
+
+let url = "https://wa.me/" + phone + "?text=" + message;
+
+window.open(url, "_blank");
+
+}
+</script>
 
 </body>
 </html>
