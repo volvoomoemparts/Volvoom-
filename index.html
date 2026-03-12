@@ -185,6 +185,29 @@ z-index:1000;
 background:#1ebe5d;
 }
 
+.model-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:20px;
+}
+
+.model-card{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.2s;
+}
+
+.model-card:hover{
+transform:scale(1.05);
+background:#f2f6fb;
+}
+
 </style>
 </head>
 
@@ -234,21 +257,27 @@ VOLVOOM is here to help.
 <section id="models">
   
   <h2 style="text-align:center; margin-bottom:30px;">
-Popular Volvo Models We Support
-</h2>
+<section id="models">
 
-<div class="models">
+<h2>Popular Volvo Models</h2>
 
-<div class="model-box">850</div>
-<div class="model-box">C30</div>
-<div class="model-box">S40</div>
-<div class="model-box">S60</div>
-<div class="model-box">S80</div>
-<div class="model-box">V40</div>
-<div class="model-box">V70</div>
-<div class="model-box">XC60</div>
-<div class="model-box">XC70</div>
-<div class="model-box">XC90</div>
+<div class="model-grid">
+
+<div class="model-card" onclick="requestModel('XC90')">XC90</div>
+<div class="model-card" onclick="requestModel('XC70')">XC70</div>
+<div class="model-card" onclick="requestModel('XC60')">XC60</div>
+
+<div class="model-card" onclick="requestModel('S80')">S80</div>
+<div class="model-card" onclick="requestModel('S60')">S60</div>
+<div class="model-card" onclick="requestModel('S40')">S40</div>
+
+<div class="model-card" onclick="requestModel('V70')">V70</div>
+<div class="model-card" onclick="requestModel('V40')">V40</div>
+<div class="model-card" onclick="requestModel('C30')">C30</div>
+
+</div>
+
+</section>
 
 <div style="
 grid-column: 1 / -1;
@@ -393,6 +422,22 @@ window.open(url, "_blank");
 <a href="https://wa.me/27703219420" class="whatsapp-float" target="_blank">
 💬
 </a>
+
+<script>
+
+function requestModel(model){
+
+let phone = "27703219420";
+
+let message = "Hello VOLVOOM,%0A%0AI'm looking for parts for a Volvo " + model + ".";
+
+let url = "https://wa.me/" + phone + "?text=" + message;
+
+window.open(url,"_blank");
+
+}
+
+</script>
 
 </body>
 </html>
