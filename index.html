@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VOLVOOM | Volvo New & Used OEM Parts</title>
+<title>VOLVOOM | Volvo Parts Cape Town | New & Used OEM Volvo Spares</title>
+
+<meta name="description" content="VOLVOOM supplies new and used OEM Volvo parts in Cape Town. XC90, S60, V70, XC60 and more. Contact us on WhatsApp for fast Volvo spares in Kraaifontein, Western Cape.">
+
+<meta name="keywords" content="Volvo parts Cape Town, Volvo spares South Africa, Volvo XC90 parts, Volvo S60 parts, Volvo used parts Cape Town, Volvo breakers Kraaifontein">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 
@@ -46,10 +51,6 @@ background:#003057;
 color:white;
 padding:40px 20px;
 text-align:center;
-}
-
-section{
-padding:30px 20px;
 }
 
 h2{
@@ -229,9 +230,9 @@ Windsorpark, Kraaifontein • Cape Town • Western Cape • South Africa
 
 <nav>
 
-<a href="#">Home</a>
+<a href="index.html">Home</a>
 <a href="#about">About</a>
-<a href="#models">Volvo Models</a>
+<a href="#models">Volvo Model Catalog</a>
 <a href="#request">Request Part</a>
 <a href="#contact">Contact</a>
 
@@ -243,8 +244,9 @@ Windsorpark, Kraaifontein • Cape Town • Western Cape • South Africa
 
 <section id="about">
 <h2>About VOLVOOM</h2>
-<p>VOLVOOM specializes in supplying quality **new and used OEM Volvo parts**.
-We help Volvo owners and enthusiasts find reliable parts quickly and affordably.
+<p>
+VOLVOOM specializes in supplying quality new and used OEM Volvo parts in Cape Town, South Africa. 
+Based in Windsorpark, Kraaifontein, we help Volvo owners find reliable parts quickly and affordably.
 </p>
 
 <p>
@@ -255,25 +257,24 @@ VOLVOOM is here to help.
 </section>
 
 <section id="models">
-  
-  <h2 style="text-align:center; margin-bottom:30px;">
-<section id="models">
 
-<h2>Popular Volvo Models</h2>
+<h2 style="text-align:center;">Volvo Model Catalog</h2>
 
 <div class="model-grid">
 
-<div class="model-card" onclick="requestModel('XC90')">XC90</div>
-<div class="model-card" onclick="requestModel('XC70')">XC70</div>
-<div class="model-card" onclick="requestModel('XC60')">XC60</div>
+<a href="c30.html" class="model-card">C30</a>
+<a href="s40.html" class="model-card">S40</a>
+<a href="s60.html" class="model-card">S60</a>
+<a href="s80.html" class="model-card">S80</a>
 
-<div class="model-card" onclick="requestModel('S80')">S80</div>
-<div class="model-card" onclick="requestModel('S60')">S60</div>
-<div class="model-card" onclick="requestModel('S40')">S40</div>
+<a href="v40.html" class="model-card">V40</a>
+<a href="v70.html" class="model-card">V70</a>
 
-<div class="model-card" onclick="requestModel('V70')">V70</div>
-<div class="model-card" onclick="requestModel('V40')">V40</div>
-<div class="model-card" onclick="requestModel('C30')">C30</div>
+<a href="xc60.html" class="model-card">XC60</a>
+<a href="xc70.html" class="model-card">XC70</a>
+<a href="xc90.html" class="model-card">XC90</a>
+
+<a href="850.html" class="model-card">850</a>
 
 </div>
 
@@ -320,8 +321,6 @@ Request Parts on WhatsApp
 
 </div>
 
-</section>
-
 <section id="request">
 <h2>Request a Volvo Part</h2>
 
@@ -329,15 +328,15 @@ Request Parts on WhatsApp
 
 <label>Choose your Volvo Model:</label><br>
 <select id="model">
-<option>XC90</option>
-<option>XC70</option>
-<option>XC60</option>
-<option>S80</option>
-<option>S60</option>
-<option>S40</option>
-<option>V70</option>
-<option>V40</option>
 <option>C30</option>
+<option>S40</option>
+<option>S60</option>
+<option>S80</option>
+<option>V40</option>
+<option>V70</option>
+<option>XC60</option>
+<option>XC70</option>
+<option>XC90</option>
 <option>850</option>
 </select>
 
@@ -358,9 +357,6 @@ Request Part on WhatsApp
 </button>
 
 </form>
-</section>
-
-</form>
 
 </section>
 
@@ -377,12 +373,12 @@ Request Part on WhatsApp
 
 <p>
 <strong>WhatsApp:</strong>
-<a href="https://wa.me/27703219420">070 321 9420</a>
+<a href="https://wa.me/27703219420" target="_blank">070 321 9420</a>
 </p>
 
 <p>
 <strong>Email:</strong>
-<a href="mailto:volvoom.oemparts@gmail.com">volvoom.oemparrs@gmail.com</a>
+<a href="mailto:volvoom.oemparts@gmail.com">volvoom.oemparts@gmail.com</a>
 </p>
 
 <p>
@@ -422,22 +418,6 @@ window.open(url, "_blank");
 <a href="https://wa.me/27703219420" class="whatsapp-float" target="_blank">
 💬
 </a>
-
-<script>
-
-function requestModel(model){
-
-let phone = "27703219420";
-
-let message = "Hello VOLVOOM,%0A%0AI'm looking for parts for a Volvo " + model + ".";
-
-let url = "https://wa.me/" + phone + "?text=" + message;
-
-window.open(url,"_blank");
-
-}
-
-</script>
 
 </body>
 </html>
