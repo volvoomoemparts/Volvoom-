@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>VOLVOOM | Volvo XC90 Parts</title>
@@ -10,35 +11,41 @@ body{
 font-family:Arial;
 background:#f4f7fa;
 padding:30px;
+margin:0;
 }
 
 h1{
 text-align:center;
+margin-bottom:40px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-margin-top:30px;
+gap:25px;
+max-width:1000px;
+margin:auto;
 }
 
 .part{
-text-align:center;
 background:white;
 padding:15px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
+text-align:center;
 }
 
 .part img{
 width:100%;
+height:140px;
+object-fit:cover;
 border-radius:8px;
+margin-bottom:10px;
 }
 
 .part p{
-margin-top:10px;
 font-weight:bold;
+margin:0;
 }
 
 </style>
@@ -52,31 +59,32 @@ font-weight:bold;
 <div class="gallery">
 
 <div class="part">
-<img src="images/engine.jpg">
+<img src="engine.jpg">
 <p>Engine</p>
 </div>
 
 <div class="part">
-<img src="images/turbo.jpg">
+<img src="turbo.jpg">
 <p>Turbo</p>
 </div>
 
 <div class="part">
-<img src="images/transmission.jpg">
+<img src="transmission.jpg">
 <p>Transmission</p>
 </div>
 
 <div class="part">
-<img src="images/suspension.jpg">
+<img src="suspension.jpg">
 <p>Suspension</p>
 </div>
 
 <div class="part">
-<img src="images/interior.jpg">
+<img src="interior.jpg">
 <p>Interior</p>
 </div>
 
 </div>
 
 </body>
+
 </html>
