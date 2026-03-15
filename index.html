@@ -92,6 +92,20 @@ text-decoration:none;
 font-weight:bold;
 }
 
+<section id="finder">
+
+<h2>Find Your Volvo Model</h2>
+
+<div class="finder-box">
+
+<input type="text" id="modelSearch" placeholder="Enter Volvo model (Example: XC90, S60)">
+
+<button onclick="findModel()">Search</button>
+
+</div>
+
+</section>
+
 /* SECTIONS */
 
 section{
@@ -199,6 +213,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 <header>
 
 <img src="Logo.png" alt="VOLVOOM Logo" style="width:1400px;max-width:100%;height:auto;">
+
 <p style="font-size:32px;font-weight:600;margin-top:10px;">
 Volvo New & Used OEM Parts
 </p>
@@ -385,6 +400,36 @@ window.open(url,"_blank");
 </script>
 
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
+
+<script>
+
+function findModel(){
+
+let model=document.getElementById("modelSearch").value.toLowerCase();
+
+let models={
+"c30":"c30.html",
+"s40":"s40.html",
+"s60":"s60.html",
+"s80":"s80.html",
+"v40":"v40.html",
+"v70":"v70.html",
+"xc60":"xc60.html",
+"xc70":"xc70.html",
+"xc90":"xc90.html",
+"850":"850.html"
+};
+
+if(models[model]){
+window.location.href=models[model];
+}
+else{
+alert("Model not found. Please enter a valid Volvo model.");
+}
+
+}
+
+</script>
 
 </body>
 </html>
