@@ -112,3 +112,24 @@ border-radius:5px;
 margin-left:10px;
 cursor:pointer;
 }
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#003057;
+padding:15px 20px;
+color:white;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+font-weight:bold;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}

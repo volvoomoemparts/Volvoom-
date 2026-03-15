@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VOLVOOM | Request a Volvo Part</title>
+<title>VOLVOOM | Volvo Parts Request</title>
+
+<link rel="stylesheet" href="style.css">
 
 <style>
 
-body{
-font-family:Arial;
-background:#eef2f5;
-margin:0;
-text-align:center;
-}
-
-h1{
-margin-top:40px;
-color:#003057;
-}
-
-form{
+.request-container{
 max-width:500px;
-margin:40px auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-padding:20px;
+margin:60px auto;
+padding:30px;
+background:white;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
 
-input, select, textarea{
+.request-container h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.request-container input,
+.request-container select,
+.request-container textarea{
+width:100%;
 padding:12px;
-border-radius:8px;
+margin-bottom:12px;
 border:1px solid #ccc;
-font-size:16px;
+border-radius:5px;
+box-sizing:border-box;
 }
 
-button{
+.request-container button{
+width:100%;
+padding:14px;
 background:#003057;
 color:white;
-padding:14px;
 border:none;
-border-radius:8px;
+border-radius:5px;
 font-size:16px;
 cursor:pointer;
-}
-
-button:hover{
-background:#00509e;
 }
 
 </style>
@@ -55,42 +53,87 @@ background:#00509e;
 
 <body>
 
-<h1>Request a Volvo Part</h1>
+<div class="request-container">
 
-<form>
+<h2>Volvo Part Request</h2>
 
-<input type="text" placeholder="Your Name">
+<input type="text" id="name" placeholder="Your Name">
 
-<input type="tel" placeholder="Phone Number">
+<input type="tel" id="phone" placeholder="Phone Number">
 
-<select>
-<option>Select Volvo Model</option>
+<select id="model">
+<option value="">Select Volvo Model</option>
 <option>XC90</option>
-<option>XC60</option>
 <option>XC70</option>
-<option>S80</option>
+<option>XC60</option>
 <option>S60</option>
-<option>S40</option>
-<option>V70</option>
-<option>V40</option>
+<option>S80</option>
 <option>C30</option>
-<option>850</option>
+<option>V40</option>
+<option>V70</option>
 </select>
 
-<input type="text" placeholder="Vehicle Year">
+<input type="text" id="year" placeholder="Vehicle Year">
 
-<textarea placeholder="Part you are looking for"></textarea>
+<input type="text" id="part" placeholder="Part Needed">
 
-<button type="submit">Submit Request</button>
+<input type="text" id="vin" placeholder="VIN Number (optional)">
 
-</form>
+<textarea id="notes" placeholder="Additional details"></textarea>
+
+<button onclick="sendRequest()">Send Request via WhatsApp</button>
+
+</div>
+
+<script>
+
+function sendRequest(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let model=document.getElementById("model").value;
+let year=document.getElementById("year").value;
+let part=document.getElementById("part").value;
+let vin=document.getElementById("vin").value;
+let notes=document.getElementById("notes").value;
+
+let message="VOLVO PART REQUEST%0A%0A"+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Model: "+model+"%0A"+
+"Year: "+year+"%0A"+
+"Part: "+part+"%0A"+
+"VIN: "+vin+"%0A"+
+"Notes: "+notes;
+
+let url="https://wa.me/27703219420?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script>
 
 <a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
-class="whatsapp-btn" target="_blank">
+class="whatsapp-btn"
+target="_blank">
 
-💬 Request Volvo Part
+💬 Request Part
 
 </a>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">VOLVOOM</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="request.html">Request Part</a>
+<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
+</nav>
+
+</header>
 
 </body>
 </html>
