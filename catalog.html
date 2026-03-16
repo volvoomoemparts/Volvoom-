@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,28 +13,80 @@
 <style>
 
 body{
+margin:0;
 font-family:'Open Sans',sans-serif;
 background:#f4f7fa;
-margin:0;
+color:#333;
 text-align:center;
 }
+
+/* NAVBAR */
+
+.navbar{
+background:#003057;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+.logo{
+font-family:'Montserrat';
+font-size:22px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.navbar nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HEADER */
 
 header{
 background:#003057;
 color:white;
-padding:40px;
+padding:40px 20px;
 }
 
 h1{
 font-family:'Montserrat';
 }
 
+/* WHY CHOOSE */
+
+.why{
+background:white;
+max-width:700px;
+margin:40px auto;
+border-radius:10px;
+padding:30px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.why ul{
+list-style:none;
+padding:0;
+font-size:18px;
+}
+
+.why li{
+margin:12px 0;
+}
+
+/* MODEL GRID */
+
 .catalog-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 padding:40px;
-max-width:800px;
+max-width:900px;
 margin:auto;
 }
 
@@ -46,101 +100,104 @@ color:#333;
 font-size:18px;
 font-weight:bold;
 display:block;
-text-align:center;
-}
-
-.catalog-card:hover{
-background:#003057;
-color:white;
-}
-
-.back{
-display:inline-block;
-margin-top:20px;
-text-decoration:none;
-color:#003057;
-font-weight:bold;
 }
 
 .catalog-card img{
 width:100%;
 border-radius:10px;
 margin-bottom:8px;
-object-fit:cover;
+}
+
+.catalog-card:hover{
+background:#003057;
+color:white;
+transform:scale(1.05);
+}
+
+/* FIND PART SECTION */
+
+.find-part{
+background:#003057;
+color:white;
+padding:60px 20px;
+margin-top:40px;
+}
+
+.cta-button{
+display:inline-block;
+margin-top:15px;
+background:#4CAF50;
+color:white;
+padding:14px 30px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FORM */
+
+form{
+display:flex;
+flex-direction:column;
+gap:12px;
+max-width:500px;
+margin:auto;
+padding:40px 20px;
+}
+
+input,textarea,select{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+width:100%;
+box-sizing:border-box;
+}
+
+button{
+background:#003057;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+padding:40px 20px;
+}
+
+/* FOOTER */
+
+footer{
+background:#003057;
+color:white;
+padding:30px;
+margin-top:40px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 </style>
+
 </head>
 
 <body>
-
-<header>
-<h1>VOLVOOM Volvo Model Catalog</h1>
-<p>Select your Volvo model</p>
-</header>
-
-<div class="catalog-grid">
-
-<a href="c30.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/2008_Volvo_C30.jpg" alt="Volvo C30">
-C30
-</a>
-
-<a href="s40.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Volvo_S40_2.0D.jpg" alt="Volvo S40">
-S40
-</a>
-
-<a href="s60.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Volvo_S60_2019.jpg" alt="Volvo S60">
-S60
-</a>
-
-<a href="s80.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Volvo_S80_2008.jpg" alt="Volvo S80">
-S80
-</a>
-
-<a href="v40.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Volvo_V40_2013.jpg" alt="Volvo V40">
-V40
-</a>
-
-<a href="v70.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Volvo_V70_III.jpg" alt="Volvo V70">
-V70
-</a>
-
-<a href="xc60.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Volvo_XC60_D5.jpg" alt="Volvo XC60">
-XC60
-</a>
-
-<a href="xc70.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Volvo_XC70_D5.jpg" alt="Volvo XC70">
-XC70
-</a>
-
-<a href="xc90.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Volvo_XC90_2018.jpg" alt="Volvo XC90">
-XC90
-</a>
-
-<a href="850.html" class="catalog-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Volvo_850_T5.jpg" alt="Volvo 850">
-850
-</a>
-
-</div>
-
-<a href="index.html" class="back">← Back to Home</a>
-
-<a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
-class="whatsapp-btn" target="_blank">
-
-💬 Request Part
-
-</a>
 
 <header class="navbar">
 
@@ -149,11 +206,179 @@ class="whatsapp-btn" target="_blank">
 <nav>
 <a href="index.html">Home</a>
 <a href="catalog.html">Catalog</a>
-<a href="request.html">Request Part</a>
+<a href="#request">Request Part</a>
 <a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
 </nav>
 
 </header>
+
+<header>
+
+<h1>VOLVOOM Volvo Model Catalog</h1>
+<p>Select your Volvo model</p>
+
+</header>
+
+
+<div class="catalog-grid">
+
+<a href="c30.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/2008_Volvo_C30.jpg">
+C30
+</a>
+
+<a href="s40.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Volvo_S40_2.0D.jpg">
+S40
+</a>
+
+<a href="s60.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Volvo_S60_2019.jpg">
+S60
+</a>
+
+<a href="v40.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Volvo_V40_2013.jpg">
+V40
+</a>
+
+<a href="v70.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Volvo_V70_III.jpg">
+V70
+</a>
+
+<a href="xc60.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Volvo_XC60_D5.jpg">
+XC60
+</a>
+
+<a href="xc70.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Volvo_XC70_D5.jpg">
+XC70
+</a>
+
+<a href="xc90.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Volvo_XC90_2018.jpg">
+XC90
+</a>
+
+<a href="850.html" class="catalog-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Volvo_850_T5.jpg">
+850
+</a>
+
+</div>
+
+
+<div class="why">
+
+<h2>Why Choose VOLVOOM</h2>
+
+<ul>
+<li>✔ Genuine Volvo OEM Parts</li>
+<li>✔ Tested & Quality Checked</li>
+<li>✔ Nationwide Shipping</li>
+<li>✔ Volvo Specialists</li>
+<li>✔ Parts From Carefully Selected Donor Vehicles</li>
+</ul>
+
+</div>
+
+
+<section class="find-part">
+
+<h2>Find Your Volvo Part</h2>
+
+<p>Use our parts request form to find the exact Volvo part you need.</p>
+
+<a href="#request" class="cta-button">Start Parts Finder</a>
+
+</section>
+
+
+<section id="request">
+
+<h2>Request a Volvo Part</h2>
+
+<form>
+
+<label>Choose your Volvo Model</label>
+
+<select id="model">
+<option>XC90</option>
+<option>XC70</option>
+<option>XC60</option>
+<option>V70</option>
+<option>S60</option>
+<option>S40</option>
+<option>V40</option>
+<option>C30</option>
+<option>850</option>
+</select>
+
+<label>Enter the Part You Need</label>
+
+<input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
+
+<label>Extra Details</label>
+
+<textarea id="details" placeholder="Year, engine type, etc"></textarea>
+
+<button type="button" onclick="sendWhatsApp()">
+Request Part on WhatsApp
+</button>
+
+</form>
+
+</section>
+
+
+<section class="contact">
+
+<h2>Contact VOLVOOM</h2>
+
+<p>
+<strong>Call:</strong> 078 255 1664<br>
+<strong>WhatsApp:</strong> 070 321 9420<br>
+<strong>Email:</strong> volvoom.oemparts@gmail.com
+</p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
+
+</footer>
+
+
+<script>
+
+function sendWhatsApp(){
+
+let model=document.getElementById("model").value;
+let part=document.getElementById("part").value;
+let details=document.getElementById("details").value;
+
+let phone="27703219420";
+
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
+
+let url="https://wa.me/"+phone+"?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+
+<a href="https://wa.me/27703219420" class="whatsapp-btn" target="_blank">
+
+💬 Request Part
+
+</a>
 
 </body>
 </html>
