@@ -134,9 +134,199 @@ font-size:20px;
 font-weight:bold;
 }
 
+.finder{
+background:#f4f4f4;
+padding:30px;
+margin:40px auto;
+max-width:500px;
+text-align:center;
+border-radius:10px;
+}
+
+.finder select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.finder button{
+width:100%;
+padding:14px;
+background:#003057;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+.parts-categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.parts-categories a{
+background:white;
+padding:20px;
+border-radius:8px;
+text-align:center;
+text-decoration:none;
+font-weight:bold;
+color:#003057;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:0.2s;
+}
+
+.parts-categories a:hover{
+background:#003057;
+color:white;
+}
+
 .back{
 display:block;
 text-align:center;
 margin-bottom:60px;
 font-weight:500;
+}
+
+.vehicle-info{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-bottom:30px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+margin-top:10px;
+text-align:left;
+}
+
+/* ============================= */
+/* HOMEPAGE HERO SECTION */
+/* ============================= */
+
+.hero{
+position:relative;
+background:url('images/xc90.jpg') center/cover no-repeat;
+padding:120px 20px;
+text-align:center;
+color:white;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.hero *{
+position:relative;
+}
+
+.hero-logo{
+width:260px;
+max-width:90%;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* Green CTA Button */
+
+.cta-button{
+display:inline-block;
+margin-top:20px;
+background:#4CAF50;
+color:white;
+padding:14px 30px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.cta-button:hover{
+background:#3d9441;
+}
+
+/* ============================= */
+/* HOMEPAGE MODEL GRID */
+/* ============================= */
+
+.model-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+max-width:900px;
+margin:30px auto;
+}
+
+.model-card{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-decoration:none;
+color:#333;
+transition:0.2s;
+}
+
+.model-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.model-card:hover{
+transform:scale(1.05);
+background:#f2f6fb;
+}
+
+/* ============================= */
+/* SECTION SPACING */
+/* ============================= */
+
+section{
+padding:60px 20px;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+/* ============================= */
+/* NAVBAR IMPROVEMENT */
+/* ============================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#003057;
+padding:15px 20px;
+color:white;
+}
+
+.navbar nav a:hover{
+color:#00c2ff;
 }
