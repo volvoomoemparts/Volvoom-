@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOLVOOM XC90 Interior Parts</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f7fa;
+margin:0;
+text-align:center;
+}
+
+.section{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+.section img{
+width:100%;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section p{
+margin-top:20px;
+font-size:18px;
+}
+
+.request-box{
+margin-top:30px;
+}
+
+.request-box textarea{
+width:100%;
+height:120px;
+padding:12px;
+font-size:16px;
+border-radius:8px;
+border:1px solid #ccc;
+box-sizing:border-box;
+}
+
+.request-btn{
+margin-top:15px;
+display:inline-block;
+background:#25D366;
+color:white;
+padding:15px 25px;
+font-size:18px;
+border-radius:8px;
+text-decoration:none;
+}
+
+.request-btn:hover{
+background:#1ebe5d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">VOLVOOM</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="request.html">Request Part</a>
+</nav>
+
+</header>
+
+<div class="section">
+
+<h1>Volvo XC90 Interior</h1>
+
+<img src="images/xc90-interior.jpg" alt="Volvo XC90 Interior">
+
+<p>
+Looking for a Volvo XC90 interior part?  
+Identify the part from the image above and send us a request.
+</p>
+
+<div class="request-box">
+
+<textarea id="partRequest" placeholder="Example: Volvo XC90 2008 window switch, climate control unit, dashboard trim..."></textarea>
+
+<br>
+
+<a class="request-btn"
+onclick="sendRequest()">
+💬 Request This Part
+</a>
+
+</div>
+
+</div>
+
+<a href="catalog.html" class="back">← Back to Catalog</a>
+
+<script>
+
+function sendRequest(){
+
+var part = document.getElementById("partRequest").value;
+
+var message = "Hello VOLVOOM, I am looking for a Volvo XC90 interior part: " + part;
+
+var url = "https://wa.me/27703219420?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>

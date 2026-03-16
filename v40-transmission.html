@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Volvo V40 Transmission Parts</title><style>
+
+body{
+font-family:Arial, sans-serif;
+background:#f4f6f8;
+margin:0;
+text-align:center;
+}
+
+h1{
+margin-top:40px;
+margin-bottom:30px;
+}
+
+.parts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.part-card{
+background:white;
+border-radius:12px;
+padding:20px;
+text-decoration:none;
+color:#333;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.25s;
+}
+
+.part-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.part-card:hover{
+transform:scale(1.05);
+background:#eef3f8;
+}
+
+.back{
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
+color:#003057;
+font-weight:bold;
+}
+
+.navbar{
+background:#0c3b5c;
+color:white;
+padding:20px;
+margin-top:40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:20px;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:500;
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 22px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+</style></head><body><h1>Volvo V40 Transmission Parts</h1><div class="parts-grid"><a href="#" class="part-card" onclick="requestPart('V40','2013-2019','Transmission')">
+<img src="images/transmission.jpg">
+<p>Transmission Assembly</p>
+</a><a href="#" class="part-card" onclick="requestPart('V40','2013-2019','Gearbox')">
+<img src="images/transmission.jpg">
+<p>Gearbox</p>
+</a><a href="#" class="part-card" onclick="requestPart('V40','2013-2019','Torque Converter')">
+<img src="images/transmission.jpg">
+<p>Torque Converter</p>
+</a><a href="#" class="part-card" onclick="requestPart('V40','2013-2019','Valve Body')">
+<img src="images/transmission.jpg">
+<p>Valve Body</p>
+</a><a href="#" class="part-card" onclick="requestPart('V40','2013-2019','TCM Transmission Control Module')">
+<img src="images/transmission.jpg">
+<p>Transmission Control Module</p>
+</a></div><a href="catalog.html" class="back">
+← Back to Catalog
+</a><header class="navbar"><a href="index.html" class="logo">VOLVOOM</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="request.html">Request Part</a>
+<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
+</nav></header><script>
+
+function requestPart(model,year,part){
+
+let phone="27703219420";
+
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+
+"%0AYear: "+year+
+"%0APart: "+part+
+"%0A%0APlease let me know if it is available.";
+
+let url="https://wa.me/"+phone+"?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script><a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
+class="whatsapp-btn" target="_blank">
+
+💬 Request Part
+
+</a></body>
+</html>

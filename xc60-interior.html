@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOLVOOM XC60 Interior Parts</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6f9;
+text-align:center;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+.part-image{
+width:100%;
+max-width:800px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+.description{
+margin-top:20px;
+font-size:18px;
+color:#333;
+}
+
+.request-box{
+margin-top:30px;
+}
+
+textarea{
+width:100%;
+max-width:500px;
+height:120px;
+padding:12px;
+font-size:16px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.request-btn{
+display:inline-block;
+margin-top:15px;
+padding:14px 28px;
+background:#25D366;
+color:white;
+font-size:18px;
+border-radius:8px;
+text-decoration:none;
+}
+
+.request-btn:hover{
+background:#1ebd5a;
+}
+
+.back-link{
+display:block;
+margin-top:40px;
+font-size:18px;
+text-decoration:none;
+color:#333;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>VOLVOOM</h2>
+
+</header>
+
+<div class="container">
+
+<h1>Volvo XC60 Interior Parts</h1>
+
+<img src="images/xc60-interior.jpg" class="part-image" alt="Volvo XC60 Interior">
+
+<p class="description">
+
+Identify the interior part you are looking for from the image above.
+Type the part name in the request box and send us a request.
+
+</p>
+
+<div class="request-box">
+
+<textarea id="partRequest" placeholder="Example: XC60 2012 window switch, dashboard trim, climate control unit"></textarea>
+
+<br>
+
+<a class="request-btn" onclick="sendRequest()">
+Request This Part
+</a>
+
+</div>
+
+</div>
+
+<a href="catalog.html" class="back-link">← Back to Catalog</a>
+
+<script>
+
+function sendRequest(){
+
+var part = document.getElementById("partRequest").value;
+
+var message = "Hello VOLVOOM, I am looking for this Volvo XC60 interior part: " + part;
+
+var url = "https://wa.me/27703219420?text=" + encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+
+</html>
