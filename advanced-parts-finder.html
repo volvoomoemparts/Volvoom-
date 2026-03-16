@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced Volvo Parts Finder | VOLVOOM</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+text-align:center;
+}
+
+header{
+background:#1c1c1c;
+color:white;
+padding:20px;
+font-size:26px;
+font-weight:bold;
+}
+
+.container{
+max-width:650px;
+margin:auto;
+padding:40px 20px;
+}
+
+.finder-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:20px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+.request-btn{
+display:inline-block;
+width:100%;
+padding:14px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:6px;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+.request-btn:hover{
+background:#1ebe5d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+VOLVOOM Advanced Parts Finder
+</header>
+
+<div class="container">
+
+<div class="finder-box">
+
+<h2>Select Your Volvo Part</h2>
+
+<select id="model">
+<option value="">Select Model</option>
+<option>XC90</option>
+<option>XC70</option>
+<option>XC60</option>
+<option>V70</option>
+<option>V40</option>
+<option>S80</option>
+<option>S60</option>
+<option>S40</option>
+<option>C30</option>
+<option>850</option>
+</select>
+
+<select id="year">
+<option value="">Select Year</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+</select>
+
+<select id="category">
+
+<option value="">Select Category</option>
+
+<option>Engine</option>
+<option>Transmission</option>
+<option>Suspension</option>
+<option>Interior</option>
+<option>Electrical</option>
+<option>Body Parts</option>
+
+</select>
+
+<select id="part">
+
+<option value="">Select Part</option>
+
+<option>Alternator</option>
+<option>Starter Motor</option>
+<option>Turbo</option>
+<option>Gearbox</option>
+<option>Control Arm</option>
+<option>Shock Absorber</option>
+<option>Seat</option>
+<option>Dashboard</option>
+<option>Headlight</option>
+<option>Tail Light</option>
+
+</select>
+
+<button class="request-btn" onclick="sendRequest()">
+Request Part on WhatsApp
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function sendRequest(){
+
+var model=document.getElementById("model").value;
+var year=document.getElementById("year").value;
+var category=document.getElementById("category").value;
+var part=document.getElementById("part").value;
+
+var message="Hello VOLVOOM,%0A%0AI am looking for a Volvo part:%0A"+
+"Model: "+model+"%0A"+
+"Year: "+year+"%0A"+
+"Category: "+category+"%0A"+
+"Part: "+part;
+
+window.open("https://wa.me/27712345678?text="+message);
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOLVOOM Volvo Parts Finder</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#f4f4f4;
+margin:0;
+padding:0;
+text-align:center;
+}
+
+header{
+background:#111;
+color:white;
+padding:20px;
+}
+
+header h1{
+margin:0;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+background:white;
+padding:30px;
+margin-top:40px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+select,input{
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:16px;
+}
+
+button{
+background:#0a84ff;
+color:white;
+padding:14px;
+border:none;
+width:100%;
+font-size:18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0066cc;
+}
+
+.back{
+display:block;
+margin:20px;
+font-size:18px;
+text-decoration:none;
+color:#0a84ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>VOLVOOM Parts Finder</h1>
+<p>Find the Volvo part you need</p>
+
+</header>
+
+<a class="back" href="index.html">← Back to VOLVOOM</a>
+
+<div class="container">
+
+<select id="model">
+<option value="">Select Volvo Model</option>
+<option>XC90</option>
+<option>XC70</option>
+<option>XC60</option>
+<option>V70</option>
+<option>V40</option>
+<option>S80</option>
+<option>S60</option>
+<option>S40</option>
+<option>C30</option>
+<option>850</option>
+</select>
+
+<select id="year">
+<option value="">Select Year</option>
+<option>1998-2002</option>
+<option>2003-2007</option>
+<option>2008-2014</option>
+<option>2015-2020</option>
+</select>
+
+<select id="system">
+<option value="">Select System</option>
+<option>Engine</option>
+<option>Transmission</option>
+<option>Turbo</option>
+<option>Suspension</option>
+<option>Brakes</option>
+<option>Interior</option>
+<option>Electrical</option>
+<option>Body</option>
+</select>
+
+<input type="text" id="part" placeholder="Enter the part you need (example: window switch)">
+
+<button onclick="sendRequest()">Send WhatsApp Request</button>
+
+</div>
+
+<script>
+
+function sendRequest(){
+
+var model=document.getElementById("model").value;
+var year=document.getElementById("year").value;
+var system=document.getElementById("system").value;
+var part=document.getElementById("part").value;
+
+var message="Hello VOLVOOM, I am looking for this Volvo part:%0A%0A"+
+"Model: "+model+"%0A"+
+"Year: "+year+"%0A"+
+"System: "+system+"%0A"+
+"Part: "+part;
+
+window.open("https://wa.me/27712345678?text="+message);
+
+}
+
+</script>
+
+</body>
+</html>

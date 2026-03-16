@@ -1,0 +1,101 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VOLVOOM Turbo Parts</title><link rel="stylesheet" href="style.css"><style>
+
+body{
+font-family:Arial;
+background:#f4f7fa;
+margin:0;
+text-align:center;
+}
+
+h1{
+margin-top:40px;
+}
+
+.parts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:30px;
+max-width:900px;
+margin:auto;
+}
+
+.part-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.part-card img{
+width:100%;
+border-radius:6px;
+}
+
+.part-card p{
+margin-top:10px;
+font-weight:bold;
+}
+
+.part-card:hover{
+transform:scale(1.05);
+}
+
+.back{
+display:inline-block;
+margin-top:30px;
+text-decoration:none;
+color:#003057;
+font-weight:bold;
+}
+
+</style></head><body><header class="navbar"><a href="index.html" class="logo">VOLVOOM</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="request.html">Request Part</a>
+</nav></header><h1>Turbo Parts</h1><div class="parts-grid"><div class="part-card" onclick="requestPart('MODEL','YEAR','Turbocharger')">
+<img src="images/turbo.jpg">
+<p>Turbocharger</p>
+</div><div class="part-card" onclick="requestPart('MODEL','YEAR','Wastegate')">
+<img src="images/wastegate.jpg">
+<p>Wastegate</p>
+</div><div class="part-card" onclick="requestPart('MODEL','YEAR','Intercooler')">
+<img src="images/intercooler.jpg">
+<p>Intercooler</p>
+</div><div class="part-card" onclick="requestPart('MODEL','YEAR','Boost Control Valve')">
+<img src="images/boost-valve.jpg">
+<p>Boost Control Valve</p>
+</div><div class="part-card" onclick="requestPart('MODEL','YEAR','Turbo Oil Line')">
+<img src="images/turbo-oil-line.jpg">
+<p>Turbo Oil Line</p>
+</div></div><a href="catalog.html" class="back">← Back to Catalog</a>
+
+<script>
+
+function requestPart(model,year,part){
+
+let phone="27703219420";
+
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+
+"%0AYear: "+year+
+"%0APart: "+part+
+"%0A%0APlease let me know if it is available.";
+
+let url="https://wa.me/"+phone+"?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script><a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
+class="whatsapp-btn" target="_blank">
+
+💬 Request Part
+
+</a></body>
+</html>
