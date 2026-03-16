@@ -5,37 +5,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VOLVOOM C30 Engine Catalog</title>
+<title>VOLVOOM Engine Parts</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f7fa;
+margin:0;
+text-align:center;
+}
+
+.parts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:30px;
+max-width:900px;
+margin:auto;
+}
+
+.part-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.part-card img{
+width:100%;
+border-radius:6px;
+}
+
+.part-card p{
+margin-top:10px;
+font-weight:bold;
+}
+
+</style>
 
 </head>
 
 <body>
-
-<h1>Volvo C30 Engine Types</h1>
-
-<div class="year-grid">
-
-<a href="#" class="year-card">1.6</a>
-<a href="#" class="year-card">2.0</a>
-<a href="#" class="year-card">2.4</a>
-<a href="#" class="year-card">T5 Turbo</a>
-
-</div>
-
-<a href="https://wa.me/27703219420?text=Hi%20VOLVOOM,%20I'm%20looking%20for%20Volvo%20C30%20parts" class="whatsapp-btn">
-💬 Request C30 Parts
-</a>
-
-<a href="c30.html" class="back">← Back to C30</a>
-
-<a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
-class="whatsapp-btn" target="_blank">
-
-💬 Request Part
-
-</a>
 
 <header class="navbar">
 
@@ -45,10 +58,39 @@ class="whatsapp-btn" target="_blank">
 <a href="index.html">Home</a>
 <a href="catalog.html">Catalog</a>
 <a href="request.html">Request Part</a>
-<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
 </nav>
 
 </header>
+
+<h1>Engine Parts</h1>
+
+<div class="parts-grid">
+
+<div class="part-card">
+<img src="images/engine1.jpg">
+<p>Volvo Engine</p>
+</div>
+
+<div class="part-card">
+<img src="images/turbo.jpg">
+<p>Turbo Charger</p>
+</div>
+
+<div class="part-card">
+<img src="images/injector.jpg">
+<p>Fuel Injectors</p>
+</div>
+
+</div>
+
+<a href="catalog.html" class="back">← Back to Catalog</a>
+
+<a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
+class="whatsapp-btn" target="_blank">
+
+💬 Request Part
+
+</a>
 
 </body>
 </html>

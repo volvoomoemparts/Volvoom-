@@ -1,0 +1,77 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Volvo C30 Suspension Parts</title><link rel="stylesheet" href="style.css"><style>
+
+body{
+font-family:Arial;
+background:#f4f7fa;
+margin:0;
+text-align:center;
+}
+
+h1{
+margin-top:40px;
+}
+
+.parts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:30px;
+max-width:900px;
+margin:auto;
+}
+
+.part-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.part-card img{
+width:100%;
+border-radius:6px;
+}
+
+.part-card p{
+margin-top:10px;
+font-weight:bold;
+}
+
+.part-card:hover{
+transform:scale(1.05);
+}
+
+</style></head><body><h1>Volvo C30 Suspension Parts</h1><div class="parts-grid"><div class="part-card" onclick="requestPart('C30','2007-2013','Shock Absorber')">
+<img src="images/shock.jpg">
+<p>Shock Absorber</p>
+</div><div class="part-card" onclick="requestPart('C30','2007-2013','Strut Assembly')">
+<img src="images/strut.jpg">
+<p>Strut Assembly</p>
+</div><div class="part-card" onclick="requestPart('C30','2007-2013','Control Arm')">
+<img src="images/control-arm.jpg">
+<p>Control Arm</p>
+</div><div class="part-card" onclick="requestPart('C30','2007-2013','Coil Spring')">
+<img src="images/spring.jpg">
+<p>Coil Spring</p>
+</div><div class="part-card" onclick="requestPart('C30','2007-2013','Wheel Hub Bearing')">
+<img src="images/wheel-hub.jpg">
+<p>Wheel Hub Bearing</p>
+</div></div><script>
+
+function requestPart(model,year,part){
+
+let phone="27703219420";
+
+let message="Hello VOLVOOM,%0A%0AModel: "+model+
+"%0AYear: "+year+
+"%0APart: "+part;
+
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
+
+}
+
+</script></body>
+</html>

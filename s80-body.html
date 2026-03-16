@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VOLVOOM S80 Body Parts</title><style>
+
+body{
+font-family:Arial;
+background:#f4f6f8;
+margin:0;
+text-align:center;
+}
+
+h1{
+margin-top:40px;
+}
+
+.parts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:25px;
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.part-card{
+background:white;
+border-radius:12px;
+padding:15px;
+text-decoration:none;
+color:#333;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.25s;
+cursor:pointer;
+}
+
+.part-card:hover{
+transform:scale(1.05);
+background:#eef3f8;
+}
+
+.part-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.back{
+display:inline-block;
+margin-top:30px;
+text-decoration:none;
+color:#003057;
+font-weight:bold;
+}
+
+</style></head><body><h1>Volvo S80 Body Parts</h1><div class="parts-grid"><div class="part-card" onclick="requestPart('S80','1998-Present','Front Bumper')">
+<img src="images/front-bumper.jpg">
+Front Bumper
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Rear Bumper')">
+<img src="images/rear-bumper.jpg">
+Rear Bumper
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Bonnet / Hood')">
+<img src="images/hood.jpg">
+Bonnet / Hood
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Fender')">
+<img src="images/fender.jpg">
+Fender
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Door')">
+<img src="images/door.jpg">
+Door
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Boot Lid / Trunk')">
+<img src="images/tailgate.jpg">
+Boot Lid / Trunk
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Headlight')">
+<img src="images/headlight.jpg">
+Headlight
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Taillight')">
+<img src="images/taillight.jpg">
+Taillight
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Side Mirror')">
+<img src="images/mirror.jpg">
+Side Mirror
+</div><div class="part-card" onclick="requestPart('S80','1998-Present','Front Grille')">
+<img src="images/grille.jpg">
+Front Grille
+</div></div><a href="index.html" class="back">
+← Back to Catalog
+</a><script>
+
+function requestPart(model,year,part){
+
+let phone="27703219420";
+
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+
+"%0AYear: "+year+
+"%0APart: "+part+
+"%0A%0APlease let me know if it is available.";
+
+let url="https://wa.me/"+phone+"?text="+message;
+
+window.open(url,"_blank");
+
+}
+
+</script></body></html>
