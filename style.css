@@ -216,8 +216,13 @@ text-align:left;
 .hero{
 position:relative;
 background:url('images/xc90.jpg') center/cover no-repeat;
-padding:120px 20px;
 text-align:center;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
 color:white;
 }
 
