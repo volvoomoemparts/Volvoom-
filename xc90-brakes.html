@@ -1,52 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VOLVOOM XC90 Brake Parts</title><link rel="stylesheet" href="style.css"><style>
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Volvo XC90 Brake Parts | VOLVOOM</title>
-
-<style>
 body{
 font-family:Arial;
-margin:0;
-padding:40px;
 background:#f4f7fa;
+margin:0;
 text-align:center;
 }
 
 h1{
-color:#003057;
+margin-top:40px;
 }
 
-a{
-display:inline-block;
-margin-top:30px;
-padding:12px 25px;
-background:#4CAF50;
-color:white;
-text-decoration:none;
+.parts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:30px;
+max-width:900px;
+margin:auto;
+}
+
+.part-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.part-card img{
+width:100%;
 border-radius:6px;
 }
-</style>
 
-</head>
+.part-card p{
+margin-top:10px;
+font-weight:bold;
+}
 
-<body>
+.part-card:hover{
+transform:scale(1.05);
+}
 
-<h1>Volvo XC90 Brake Parts</h1>
+</style></head><body><header class="navbar"><a href="index.html" class="logo">VOLVOOM</a>
 
-<p>Brake discs, brake pads, calipers and more for the Volvo XC90.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="request.html">Request Part</a>
+<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
+</nav></header><h1>Volvo XC90 Brake Parts</h1><div class="parts-grid"><div class="part-card" onclick="requestPart('XC90','2016-2024','Brake Pads')">
+<img src="images/brake-pads.jpg">
+<p>Brake Pads</p>
+</div><div class="part-card" onclick="requestPart('XC90','2016-2024','Brake Discs / Rotors')">
+<img src="images/brake-disc.jpg">
+<p>Brake Discs / Rotors</p>
+</div><div class="part-card" onclick="requestPart('XC90','2016-2024','Brake Calipers')">
+<img src="images/brake-caliper.jpg">
+<p>Brake Calipers</p>
+</div><div class="part-card" onclick="requestPart('XC90','2016-2024','ABS Sensor')">
+<img src="images/abs-sensor.jpg">
+<p>ABS Sensor</p>
+</div><div class="part-card" onclick="requestPart('XC90','2016-2024','Brake Master Cylinder')">
+<img src="images/master-cylinder.jpg">
+<p>Brake Master Cylinder</p>
+</div></div><a href="xc90.html" class="back">
+← Back to XC90
+</a><script>
 
-<p>Contact VOLVOOM to check availability.</p>
+function requestPart(model,year,part){
 
-<a href="https://wa.me/27703219420">Request XC90 Brake Parts</a>
+let phone="27703219420";
 
-<br><br>
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+
+"%0AYear: "+year+
+"%0APart: "+part+
+"%0A%0APlease let me know if it is available.";
 
-<a href="xc90.html">← Back to XC90 Parts</a>
+let url="https://wa.me/"+phone+"?text="+message;
 
-</body>
+window.open(url,"_blank");
 
+}
+
+</script><a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
+class="whatsapp-btn" target="_blank">
+
+💬 Request Part
+
+</a></body>
 </html>
