@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VOLVOOM | Volvo Parts Cape Town | New & Used OEM Volvo Spares</title>
-
-<meta name="description" content="VOLVOOM supplies new and used OEM Volvo parts in Cape Town. XC90, S60, V70, XC60 and more. Contact us on WhatsApp for fast Volvo spares in Kraaifontein, Western Cape.">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VOLVOOM | Volvo Parts Cape Town | New & Used OEM Volvo Spares</title><meta name="description" content="VOLVOOM supplies new and used OEM Volvo parts in Cape Town. XC90, S60, V70, XC60 and more. Contact us on WhatsApp for fast Volvo spares in Kraaifontein, Western Cape."><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet"><style>
 
 body{
 margin:0;
@@ -20,100 +9,108 @@ background:#f4f7fa;
 color:#333;
 }
 
-/* CENTER PAGE CONTAINER */
+/* PAGE CONTAINER */
 
 .container{
 max-width:1100px;
 margin:auto;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+.navbar{
 background:#003057;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 color:white;
-padding:40px 20px;
-text-align:center;
 }
 
-header img{
-width:200px;
-max-width:90%;
-margin:auto;
-display:block;
-}
-
-/* NAVIGATION */
-
-nav{
-background:#001f3d;
-padding:12px;
-text-align:center;
-}
-
-nav a{
+.logo{
+font-family:'Montserrat';
+font-size:22px;
+text-decoration:none;
 color:white;
-margin:0 15px;
+font-weight:bold;
+}
+
+.navbar nav a{
+color:white;
+margin-left:20px;
 text-decoration:none;
 font-weight:bold;
 }
 
-nav a:hover{
+.navbar nav a:hover{
 color:#00c2ff;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
-padding:50px 20px;
+position:relative;
+background:url('images/xc90.jpg') center/cover no-repeat;
 text-align:center;
-background:#e9f0f6;
+padding:120px 20px;
+color:white;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.hero *{
+position:relative;
+}
+
+.hero-logo{
+width:260px;
+max-width:90%;
+margin-bottom:20px;
 }
 
 .hero h1{
 font-family:'Montserrat';
-font-size:40px;
-color:#003057;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
+margin-bottom:10px;
 }
 
-.whatsapp-btn{
+.cta-button{
 display:inline-block;
 margin-top:20px;
-background:#25D366;
+background:#4CAF50;
 color:white;
-padding:15px 25px;
-border-radius:30px;
+padding:14px 30px;
+border-radius:6px;
 text-decoration:none;
 font-weight:bold;
 }
 
-<section id="finder">
-
-<h2>Find Your Volvo Model</h2>
-
-<div class="finder-box">
-
-<input type="text" id="modelSearch" placeholder="Enter Volvo model (Example: XC90, S60)">
-
-<button onclick="findModel()">Search</button>
-
-</div>
-
-</section>
+.cta-button:hover{
+background:#3d9441;
+}
 
 /* SECTIONS */
 
 section{
-padding:50px 20px;
+padding:60px 20px;
 }
 
 h2{
 text-align:center;
+font-family:'Montserrat';
 }
 
 /* MODEL GRID */
@@ -205,181 +202,58 @@ text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-</style>
-</head>
-
-<body>
-
-<header>
-
-<img src="Logo.png" alt="VOLVOOM Logo" style="width:1400px;max-width:100%;height:auto;">
-
-<p style="font-size:32px;font-weight:600;margin-top:10px;">
-Volvo New & Used OEM Parts
-</p>
-
-<p style="font-size:22px;">
-Windsorpark, Kraaifontein • Cape Town • Western Cape • South Africa
-</p>
-
-</header>
+</style></head><body><header class="navbar"><a href="index.html" class="logo">VOLVOOM</a>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="#about">About</a>
-<a href="#models">Volvo Model Catalog</a>
+<a href="#models">Catalog</a>
 <a href="#request">Request Part</a>
 <a href="#contact">Contact</a>
-</nav>
+<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
+</nav></header><div class="hero"><img src="Logo.png" class="hero-logo" alt="VOLVOOM Logo"><h1>Volvo OEM New & Used Parts</h1><p>Specialists in XC90, XC70, XC60, V70, S60 and more</p><p>Shipping Nationwide Across South Africa</p><a href="#models" class="cta-button">Find Volvo Parts</a>
 
-<div class="hero">
-
-<h1>Find Genuine Volvo OEM Parts</h1>
-
-<p>Supplying quality new and used Volvo parts across Cape Town.</p>
-
-<a href="https://wa.me/27703219420" class="whatsapp-btn">
-Chat on WhatsApp
-</a>
-
-</div>
-
-<section id="models">
-
-<h2>Volvo Model Catalog</h2>
-
-<div class="model-grid">
-
-<a href="c30.html" class="model-card">
+</div><section id="models"><h2>Popular Volvo Models</h2><div class="model-grid"><a href="c30.html" class="model-card">
 <img src="images/c30.jpg">
 <p>C30</p>
-</a>
-
-<a href="s40.html" class="model-card">
+</a><a href="s40.html" class="model-card">
 <img src="images/s40.jpg">
 <p>S40</p>
-</a>
-
-<a href="s60.html" class="model-card">
+</a><a href="s60.html" class="model-card">
 <img src="images/s60.jpg">
 <p>S60</p>
-</a>
-
-<a href="s80.html" class="model-card">
-<img src="images/s80.jpg">
-<p>S80</p>
-</a>
-
-<a href="v40.html" class="model-card">
-<img src="images/v40.jpg">
-<p>V40</p>
-</a>
-
-<a href="v70.html" class="model-card">
+</a><a href="v70.html" class="model-card">
 <img src="images/v70.jpg">
 <p>V70</p>
-</a>
-
-<a href="xc60.html" class="model-card">
+</a><a href="xc60.html" class="model-card">
 <img src="images/xc60.jpg">
 <p>XC60</p>
-</a>
-
-<a href="xc70.html" class="model-card">
+</a><a href="xc70.html" class="model-card">
 <img src="images/xc70.jpg">
 <p>XC70</p>
-</a>
-
-<a href="xc90.html" class="model-card">
+</a><a href="xc90.html" class="model-card">
 <img src="images/xc90.jpg">
 <p>XC90</p>
-</a>
-
-<a href="850.html" class="model-card">
-<img src="images/850.jpg">
-<p>850</p>
-</a>
-
-</div>
-</section>
-
-<section id="about">
-
-<h2>About VOLVOOM</h2>
-
-<p style="max-width:800px;margin:auto;text-align:center;">
-VOLVOOM specializes in supplying quality new and used OEM Volvo parts in Cape Town.
-Based in Windsorpark, Kraaifontein we help Volvo owners find reliable parts quickly and affordably.
-</p>
-
-</section>
-
-<section id="request">
-
-<h2>Request a Volvo Part</h2>
-
-<form>
-
-<label>Choose your Volvo Model</label>
+</a></div></section><section id="request"><h2>Request a Volvo Part</h2><form><label>Choose your Volvo Model</label>
 
 <select id="model">
-<option>C30</option>
-<option>S40</option>
-<option>S60</option>
-<option>S80</option>
-<option>V40</option>
-<option>V70</option>
-<option>XC60</option>
-<option>XC70</option>
 <option>XC90</option>
-<option>850</option>
-</select>
+<option>XC70</option>
+<option>XC60</option>
+<option>V70</option>
+<option>S60</option>
+<option>S40</option>
+<option>V40</option>
+<option>C30</option>
+</select><label>Enter the Part You Need</label>
 
-<label>Enter the Part You Need</label>
+<input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox"><label>Extra Details</label>
 
-<input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
+<textarea id="details" placeholder="Year, engine type, etc"></textarea><button type="button" onclick="sendWhatsApp()">Request Part on WhatsApp</button>
 
-<label>Extra Details</label>
-
-<textarea id="details" placeholder="Year, engine type, etc"></textarea>
-
-<button type="button" onclick="sendWhatsApp()">
-Request Part on WhatsApp
-</button>
-
-</form>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact VOLVOOM</h2>
-
-<p><strong>Name:</strong> Sky Maxell</p>
-
-<p><strong>Call:</strong> <a href="tel:0782551664">078 255 1664</a></p>
-
-<p><strong>WhatsApp:</strong> <a href="https://wa.me/27703219420">070 321 9420</a></p>
-
-<p><strong>Email:</strong> <a href="mailto:volvoom.oemparts@gmail.com">volvoom.oemparts@gmail.com</a></p>
-
-<p>
-<strong>Location:</strong><br>
-26 Shirley Street<br>
-Windsor Park<br>
-Kraaifontein<br>
-Western Cape
-</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
-
-</footer>
-
-<script>
+</form></section><section id="contact"><h2>Contact VOLVOOM</h2><p style="text-align:center;">
+<strong>Call:</strong> 078 255 1664<br>
+<strong>WhatsApp:</strong> 070 321 9420<br>
+<strong>Email:</strong> volvoom.oemparts@gmail.com
+</p></section><footer><p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p></footer><script>
 
 function sendWhatsApp(){
 
@@ -397,59 +271,7 @@ window.open(url,"_blank");
 
 }
 
-</script>
-
-<a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
-
-<script>
-
-function findModel(){
-
-let model=document.getElementById("modelSearch").value.toLowerCase();
-
-let models={
-"c30":"c30.html",
-"s40":"s40.html",
-"s60":"s60.html",
-"s80":"s80.html",
-"v40":"v40.html",
-"v70":"v70.html",
-"xc60":"xc60.html",
-"xc70":"xc70.html",
-"xc90":"xc90.html",
-"850":"850.html"
-};
-
-if(models[model]){
-window.location.href=models[model];
-}
-else{
-alert("Model not found. Please enter a valid Volvo model.");
-}
-
-}
-
-</script>
-
-<a href="https://wa.me/27703219420?text=Hello%20VOLVOOM,%20I%20need%20help%20finding%20a%20Volvo%20part."
-class="whatsapp-btn" target="_blank">
-
-💬 Request Part
-
-</a>
-
-<header class="navbar">
-
-<a href="index.html" class="logo">VOLVOOM</a>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="catalog.html">Catalog</a>
-<a href="request.html">Request Part</a>
-<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
-</nav>
-
-</header>
+</script><a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
 
 </body>
 </html>
