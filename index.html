@@ -348,9 +348,6 @@ padding:40px 20px;
 <p>Shipping Nationwide Across South Africa</p>
 
 <a href="#models" class="cta-button">Find Volvo Parts</a>
-
-</div>
-
 <section>
 
 <h2>Why Choose VOLVOOM</h2>
@@ -366,6 +363,8 @@ padding:40px 20px;
 </div>
 
 </section>
+
+</div>
 
 <section id="models">
 <h2>Select Your Volvo Model</h2>
@@ -417,139 +416,62 @@ padding:40px 20px;
 <h2>Contact VOLVOOM</h2>
 
 <p style="text-align:center;">
-/* FLOAT BUTTONS */
-
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-}
-
-.facebook-float{
-position:fixed;
-bottom:90px;
-right:20px;
-background:#1877f2;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-color:white;
-}
-
-/* FOOTER */
-
-footer{
-background:#003057;
-color:white;
-text-align:center;
-padding:40px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header class="navbar">
-<a href="index.html" class="logo">VOLVOOM</a>
-<nav>
-<a href="#models">Catalog</a>
-<a href="#find">Request Part</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-<div class="hero">
-
-<img src="volvoom-logo.png" class="hero-logo">
-
-<h1>Volvo OEM New & Used Parts</h1>
-<p>Specialists in XC90, XC70, XC60, V70, S60 and more</p>
-<p>Shipping Nationwide Across South Africa</p>
-
-<a href="#models" class="cta-button">Find Volvo Parts</a>
-
-<!-- MOVED SECTION HERE -->
-<div class="why">
-<h2>Why Choose VOLVOOM</h2>
-<ul>
-<li>✔ Genuine Volvo OEM Parts</li>
-<li>✔ Tested & Quality Checked</li>
-<li>✔ Nationwide Shipping</li>
-<li>✔ Volvo Specialists</li>
-<li>✔ Parts From Carefully Selected Donor Vehicles</li>
-</ul>
-</div>
-
-</div>
-
-<section id="models">
-<h2>Select Your Volvo Model</h2>
-<div class="model-grid">
-<a href="xc90.html" class="model-card"><img src="images/xc90.jpg"><p>XC90</p></a>
-<a href="xc70.html" class="model-card"><img src="images/xc70.jpg"><p>XC70</p></a>
-<a href="xc60.html" class="model-card"><img src="images/xc60.jpg"><p>XC60</p></a>
-<a href="v70.html" class="model-card"><img src="images/v70.jpg"><p>V70</p></a>
-<a href="s60.html" class="model-card"><img src="images/s60.jpg"><p>S60</p></a>
-<a href="s40.html" class="model-card"><img src="images/s40.jpg"><p>S40</p></a>
-<a href="v40.html" class="model-card"><img src="images/v40.jpg"><p>V40</p></a>
-<a href="c30.html" class="model-card"><img src="images/c30.jpg"><p>C30</p></a>
-<a href="850.html" class="model-card"><img src="images/850.jpg"><p>850</p></a>
-</div>
-</section>
-
-<section id="find" class="find-part">
-
-<h2>Find Your Volvo Part</h2>
-
-<div class="request-box">
-<select id="model">
-<option>XC90</option>
-<option>XC70</option>
-<option>XC60</option>
-<option>V70</option>
-<option>S60</option>
-<option>S40</option>
-<option>V40</option>
-<option>C30</option>
-<option>850</option>
-</select>
-
-<input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
-<textarea id="details" placeholder="Year, engine type, etc"></textarea>
-
-<button onclick="sendWhatsApp()">Request Part on WhatsApp</button>
-</div>
-
-</section>
-
-<section id="contact">
-<h2>Contact VOLVOOM</h2>
-<p style="text-align:center;">
 <strong>Call:</strong> 078 255 1664<br>
 <strong>WhatsApp:</strong> 070 321 9420<br>
 <strong>Email:</strong> volvoom.oemparts@gmail.com<br>
 <strong>Facebook:</strong> 
-<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank">Follow VOLVOOM</a>
+<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank" style="color:#003057; font-weight:bold;">
+Follow VOLVOOM on Facebook
+</a>
 </p>
+
 </section>
 
 <footer>
 <p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
 </footer>
 
-<a href="https://www.facebook.com/share/1N9mPTcMDT/" class="facebook-float"><i class="fab fa-facebook-f"></i></a>
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar nav a");
+
+window.addEventListener("scroll", () => {
+let current = "";
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 150;
+if (pageYOffset >= sectionTop) {
+current = section.getAttribute("id");
+}
+});
+
+navLinks.forEach(a => {
+a.classList.remove("active");
+if (a.getAttribute("href") === "#" + current) {
+a.classList.add("active");
+}
+});
+});
+
+function sendWhatsApp(){
+let model=document.getElementById("model").value;
+let part=document.getElementById("part").value;
+let details=document.getElementById("details").value;
+
+let phone="27703219420";
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
+
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
+}
+
+</script>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank" class="facebook-float">
+<i class="fab fa-facebook-f"></i>
+</a>
+
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
 
 </body>
