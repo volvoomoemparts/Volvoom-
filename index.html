@@ -14,6 +14,10 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:'Open Sans',sans-serif;
@@ -36,7 +40,7 @@ color:white;
 z-index:1000;
 }
 
-/* Logo left */
+/* Logo */
 .logo{
 font-family:'Montserrat';
 font-size:22px;
@@ -45,13 +49,11 @@ color:white;
 font-weight:bold;
 }
 
-/* Center nav */
+/* RIGHT ALIGNED NAV */
 .navbar nav{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
+margin-left:auto;
 display:flex;
-gap:30px;
+gap:25px;
 }
 
 /* Links */
@@ -59,10 +61,18 @@ gap:30px;
 color:white;
 text-decoration:none;
 font-weight:bold;
+white-space:nowrap;
 }
 
 .navbar nav a:hover{
 color:#00c2ff;
+}
+
+/* ACTIVE LINK */
+.navbar nav a.active{
+color:#00c2ff;
+border-bottom:2px solid #00c2ff;
+padding-bottom:4px;
 }
 
 /* HERO */
@@ -76,7 +86,7 @@ display:flex;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
-padding:120px 20px 20px; /* FIXED for navbar */
+padding:120px 20px 20px;
 color:white;
 }
 
@@ -388,6 +398,30 @@ text-decoration:none;
 </footer>
 
 <script>
+
+// ACTIVE NAV ON SCROLL
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar nav a");
+
+window.addEventListener("scroll", () => {
+let current = "";
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 150;
+if (pageYOffset >= sectionTop) {
+current = section.getAttribute("id");
+}
+});
+
+navLinks.forEach(a => {
+a.classList.remove("active");
+if (a.getAttribute("href") === "#" + current) {
+a.classList.add("active");
+}
+});
+});
+
+// WHATSAPP
 function sendWhatsApp(){
 let model=document.getElementById("model").value;
 let part=document.getElementById("part").value;
@@ -398,6 +432,7 @@ let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+"%0APa
 
 window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
+
 </script>
 
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
