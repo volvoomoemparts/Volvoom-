@@ -21,11 +21,6 @@ background:#f4f7fa;
 color:#333;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-}
-
 /* NAVBAR */
 
 .navbar{
@@ -115,10 +110,6 @@ font-weight:bold;
 font-size:18px;
 }
 
-.cta-button:hover{
-background:#3d9441;
-}
-
 /* SECTIONS */
 
 section{
@@ -131,7 +122,7 @@ font-family:'Montserrat';
 margin-bottom:20px;
 }
 
-/* WHY CHOOSE */
+/* WHY */
 
 .why{
 background:white;
@@ -142,17 +133,7 @@ padding:30px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.why ul{
-list-style:none;
-padding:0;
-font-size:18px;
-}
-
-.why li{
-margin:12px 0;
-}
-
-/* MODEL GRID */
+/* MODELS */
 
 .model-grid{
 display:grid;
@@ -182,10 +163,9 @@ margin-bottom:10px;
 
 .model-card:hover{
 transform:scale(1.05);
-background:#f2f6fb;
 }
 
-/* FIND PART BANNER */
+/* FIND PART */
 
 .find-part{
 background:url('images/garage.jpg') center/cover no-repeat;
@@ -209,30 +189,52 @@ background:rgba(0,0,0,0.6);
 position:relative;
 }
 
-/* FORM */
+/* 🔥 TRANSPARENT FORM */
 
-form{
-display:flex;
-flex-direction:column;
-gap:12px;
-max-width:500px;
-margin:auto;
+.request-box{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(6px);
+-webkit-backdrop-filter:blur(6px);
+
+color:white;
+max-width:420px;
+margin:30px auto 0;
+padding:25px;
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
-input,textarea,select{
-padding:12px;
-border:1px solid #ccc;
-border-radius:5px;
+.request-box input,
+.request-box textarea,
+.request-box select{
 width:100%;
-box-sizing:border-box;
+margin-bottom:12px;
+padding:12px;
+border-radius:6px;
+
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.3);
+color:white;
 }
 
-button{
+.request-box input::placeholder,
+.request-box textarea::placeholder{
+color:rgba(255,255,255,0.7);
+}
+
+.request-box select{
+color:white;
+}
+
+.request-box button{
+width:100%;
+padding:14px;
 background:#003057;
 color:white;
-padding:12px;
 border:none;
-border-radius:5px;
+border-radius:6px;
 font-size:16px;
 cursor:pointer;
 }
@@ -262,9 +264,8 @@ align-items:center;
 justify-content:center;
 border-radius:50%;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
-  
+
 </style>
 
 </head>
@@ -272,40 +273,32 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 <body>
 
 <header class="navbar">
-
 <a href="index.html" class="logo">VOLVOOM</a>
-
 <nav>
 <a href="#models">Catalog</a>
-<a href="#request">Request Part</a>
+<a href="#find">Request Part</a>
 <a href="#contact">Contact</a>
 <a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
 </nav>
-
 </header>
-
 
 <div class="hero">
 
-<img src="volvoom-logo.png" class="hero-logo" alt="VOLVOOM Volvo OEM Parts">
+<img src="volvoom-logo.png" class="hero-logo">
 
 <h1>Volvo OEM New & Used Parts</h1>
-
 <p>Specialists in XC90, XC70, XC60, V70, S60 and more</p>
-
 <p>Shipping Nationwide Across South Africa</p>
 
 <a href="#models" class="cta-button">Find Volvo Parts</a>
 
 </div>
 
-
 <section>
 
 <h2>Why Choose VOLVOOM</h2>
 
 <div class="why">
-
 <ul>
 <li>✔ Genuine Volvo OEM Parts</li>
 <li>✔ Tested & Quality Checked</li>
@@ -313,84 +306,36 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 <li>✔ Volvo Specialists</li>
 <li>✔ Parts From Carefully Selected Donor Vehicles</li>
 </ul>
-
 </div>
 
 </section>
-
 
 <section id="models">
 
 <h2>Popular Volvo Models</h2>
 
 <div class="model-grid">
-
-<a href="xc90.html" class="model-card">
-<img src="images/xc90.jpg">
-<p>XC90</p>
-</a>
-
-<a href="xc70.html" class="model-card">
-<img src="images/xc70.jpg">
-<p>XC70</p>
-</a>
-
-<a href="xc60.html" class="model-card">
-<img src="images/xc60.jpg">
-<p>XC60</p>
-</a>
-
-<a href="v70.html" class="model-card">
-<img src="images/v70.jpg">
-<p>V70</p>
-</a>
-
-<a href="s60.html" class="model-card">
-<img src="images/s60.jpg">
-<p>S60</p>
-</a>
-
-<a href="s40.html" class="model-card">
-<img src="images/s40.jpg">
-<p>S40</p>
-</a>
-
-<a href="v40.html" class="model-card">
-<img src="images/v40.jpg">
-<p>V40</p>
-</a>
-
-<a href="c30.html" class="model-card">
-<img src="images/c30.jpg">
-<p>C30</p>
-</a>
-
-<a href="850.html" class="model-card">
-<img src="images/850.jpg">
-<p>850</p>
-</a>
-
+<a href="xc90.html" class="model-card"><img src="images/xc90.jpg"><p>XC90</p></a>
+<a href="xc70.html" class="model-card"><img src="images/xc70.jpg"><p>XC70</p></a>
+<a href="xc60.html" class="model-card"><img src="images/xc60.jpg"><p>XC60</p></a>
+<a href="v70.html" class="model-card"><img src="images/v70.jpg"><p>V70</p></a>
+<a href="s60.html" class="model-card"><img src="images/s60.jpg"><p>S60</p></a>
+<a href="s40.html" class="model-card"><img src="images/s40.jpg"><p>S40</p></a>
+<a href="v40.html" class="model-card"><img src="images/v40.jpg"><p>V40</p></a>
+<a href="c30.html" class="model-card"><img src="images/c30.jpg"><p>C30</p></a>
+<a href="850.html" class="model-card"><img src="images/850.jpg"><p>850</p></a>
 </div>
 
 </section>
 
-
-<section class="find-part">
+<section id="find" class="find-part">
 
 <h2>Find Your Volvo Part</h2>
-
 <p>Use our advanced parts finder to quickly request the exact part you need.</p>
-  
-</section>
 
-
-<section id="request">
+<div class="request-box">
 
 <h2>Request a Volvo Part</h2>
-
-<form>
-
-<label>Choose your Volvo Model</label>
 
 <select id="model">
 <option>XC90</option>
@@ -404,22 +349,15 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 <option>850</option>
 </select>
 
-<label>Enter the Part You Need</label>
-
 <input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
-
-<label>Extra Details</label>
 
 <textarea id="details" placeholder="Year, engine type, etc"></textarea>
 
-<button type="button" onclick="sendWhatsApp()">
-Request Part on WhatsApp
-</button>
+<button onclick="sendWhatsApp()">Request Part on WhatsApp</button>
 
-</form>
+</div>
 
 </section>
-
 
 <section id="contact">
 
@@ -433,18 +371,13 @@ Request Part on WhatsApp
 
 </section>
 
-
 <footer>
-
 <p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
-
 </footer>
-
 
 <script>
 
 function sendWhatsApp(){
-
 let model=document.getElementById("model").value;
 let part=document.getElementById("part").value;
 let details=document.getElementById("details").value;
@@ -453,14 +386,10 @@ let phone="27703219420";
 
 let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
 
-let url="https://wa.me/"+phone+"?text="+message;
-
-window.open(url,"_blank");
-
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
 
 </script>
-
 
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
 
