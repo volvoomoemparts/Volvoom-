@@ -1,397 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VOLVOOM | Volvo Parts Cape Town | New & Used OEM Volvo Spares</title>
-
-<meta name="description" content="VOLVOOM supplies new and used OEM Volvo parts in Cape Town. XC90, S60, V70, XC60 and more. Contact us on WhatsApp for fast Volvo spares in South Africa.">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>VOLVOOM | Volvo Parts South Africa</title>
 
 <style>
-
-html{scroll-behavior:smooth;}
-
 body{
 margin:0;
-font-family:'Open Sans',sans-serif;
-background:#f4f7fa;
-color:#333;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
 }
 
 /* NAVBAR */
-
-.navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#003057;
-padding:12px 15px;
-display:flex;
-align-items:center;
-flex-wrap:wrap;
-z-index:1000;
+header{
+background:#0b3d5c;
+color:#fff;
+padding:15px;
+text-align:center;
 }
 
-.logo{
-font-family:'Montserrat';
-font-size:20px;
-color:white;
+nav a{
+color:#fff;
+margin:0 10px;
 text-decoration:none;
-font-weight:bold;
-}
-
-.navbar nav{
-margin-left:auto;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.navbar nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
 font-size:14px;
 }
 
-@media(max-width:600px){
-.navbar{
-flex-direction:column;
-align-items:flex-start;
-}
-.navbar nav{
-margin-top:10px;
-margin-left:0;
-}
-}
-
 /* HERO */
-
 .hero{
 position:relative;
-background:url('images/xc90.jpg') center/cover no-repeat;
-min-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-padding:120px 20px 40px;
-color:white;
 text-align:center;
+color:#fff;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
+.hero img{
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
+height:400px;
+object-fit:cover;
 }
 
-.hero *{position:relative;}
-
-.hero-logo{
-width:520px;
-max-width:90%;
-margin-bottom:10px;
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+width:90%;
 }
 
 .hero h1{
-font-family:'Montserrat';
-font-size:32px;
+font-size:24px;
+margin-bottom:10px;
 }
 
-.cta-button{
-margin-top:15px;
-background:#4CAF50;
-color:white;
-padding:15px 30px;
+.hero p{
+font-size:14px;
+}
+
+.btn{
+background:#28a745;
+color:#fff;
+padding:12px 20px;
+display:inline-block;
+margin-top:10px;
 border-radius:6px;
 text-decoration:none;
-font-weight:bold;
-display:inline-block;
 }
 
-/* WHY */
-
-.hero .why{
-margin-top:35px;
-max-width:700px;
+/* WHY SECTION */
+.why{
+padding:20px;
+text-align:center;
+background:transparent;
+color:#fff;
+position:absolute;
+bottom:10px;
+width:100%;
 }
 
-.hero .why ul{
+.why ul{
 list-style:none;
 padding:0;
-text-align:left;
+font-size:14px;
 }
 
-.hero .why li{
-margin-bottom:8px;
-font-size:16px;
-}
-
-/* SECTIONS */
-
-section{
-padding:60px 20px;
-}
-
-h2{
-text-align:center;
-font-family:'Montserrat';
-}
-
-/* MODELS */
-
-.model-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-max-width:900px;
+/* SECTION */
+.section{
+padding:20px;
+max-width:1000px;
 margin:auto;
-margin-top:30px;
-}
-
-.model-card{
-background:white;
-padding:15px;
-border-radius:10px;
 text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-decoration:none;
-color:#333;
 }
 
-.model-card img{
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+gap:15px;
+}
+
+.card{
+background:#fff;
+padding:10px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img{
 width:100%;
 border-radius:8px;
 }
 
-/* FIND PART */
-
-.find-part{
-background:url('images/garage.jpg') center/cover no-repeat;
-color:white;
-text-align:center;
-padding:80px 20px;
+/* REQUEST */
+.request{
 position:relative;
+color:#fff;
 }
 
-.find-part::before{
-content:"";
+.request img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.request-content{
 position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+width:90%;
 }
 
-.find-part *{position:relative;}
-
-/* CLEAN FORM */
-
-.request-box{
-background:transparent;
-max-width:420px;
-margin:30px auto;
-padding:0;
-}
-
-.request-box input,
-.request-box textarea,
-.request-box select{
-width:100%;
-margin-bottom:12px;
-padding:14px;
-border-radius:6px;
-border:1px solid rgba(255,255,255,0.5);
-background:transparent;
-color:white;
-font-size:15px;
-}
-
-.request-box input::placeholder,
-.request-box textarea::placeholder{
-color:rgba(255,255,255,0.7);
-}
-
-.request-box button{
-width:100%;
-padding:14px;
-background:#25D366;
-color:white;
-border:none;
-border-radius:6px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* FLOAT BUTTONS (FIXED) */
-
-.whatsapp-float,
-.facebook-float{
-position:fixed;
-right:20px;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-color:white;
-font-size:26px;
-text-decoration:none;
-z-index:9999; /* 🔥 THIS FIXES IT */
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-transition:0.2s;
-}
-
-.whatsapp-float{
-bottom:20px;
-background:#25D366;
-}
-
-.facebook-float{
-bottom:90px;
-background:#1877f2;
-}
-
-.whatsapp-float:hover,
-.facebook-float:hover{
-transform:scale(1.1);
+/* CONTACT */
+.contact{
+padding:20px;
+text-align:center;
 }
 
 /* FOOTER */
-
 footer{
-background:#003057;
-color:white;
+background:#0b3d5c;
+color:#fff;
 text-align:center;
-padding:40px;
+padding:15px;
 }
 
-</style>
+/* FLOATING BUTTONS */
+.float{
+position:fixed;
+right:15px;
+z-index:999;
+}
 
+.whatsapp{
+bottom:80px;
+}
+
+.facebook{
+bottom:140px;
+}
+
+.float a{
+display:block;
+width:50px;
+height:50px;
+border-radius:50%;
+color:#fff;
+text-align:center;
+line-height:50px;
+font-size:22px;
+box-shadow:0 3px 6px rgba(0,0,0,0.3);
+}
+
+.whatsapp a{
+background:#25D366;
+}
+
+.facebook a{
+background:#1877F2;
+}
+
+/* FIX FOR SIDE SCROLL */
+html, body{
+overflow-x:hidden;
+}
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-<a href="index.html" class="logo">VOLVOOM</a>
+<header>
+<h2>VOLVOOM</h2>
 <nav>
-<a href="#models">Catalog</a>
-<a href="#find">Request Part</a>
-<a href="#contact">Contact</a>
+<a href="#">Catalog</a>
+<a href="#">Request Part</a>
+<a href="#">Contact</a>
 </nav>
 </header>
 
-<div class="hero">
-
-<img src="volvoom-logo.png" class="hero-logo">
-
+<!-- HERO -->
+<section class="hero">
+<img src="images/hero.jpg">
+<div class="hero-content">
 <h1>Volvo OEM New & Used Parts</h1>
 <p>Specialists in XC90, XC70, XC60, V70, S60 and more</p>
 <p>Shipping Nationwide Across South Africa</p>
-
-<a href="#models" class="cta-button">Find Volvo Parts</a>
+<a href="#" class="btn">Find Volvo Parts</a>
+</div>
 
 <div class="why">
-<h2>Why Choose VOLVOOM</h2>
+<h3>Why Choose VOLVOOM</h3>
 <ul>
 <li>✔ Genuine Volvo OEM Parts</li>
 <li>✔ Tested & Quality Checked</li>
 <li>✔ Nationwide Shipping</li>
 <li>✔ Volvo Specialists</li>
-<li>✔ Parts From Carefully Selected Donor Vehicles</li>
+<li>✔ Donor Vehicles</li>
 </ul>
 </div>
+</section>
 
-</div>
-
-<section id="models">
+<!-- MODELS -->
+<section class="section">
 <h2>Select Your Volvo Model</h2>
-<div class="model-grid">
-<a href="xc90.html" class="model-card"><img src="images/xc90.jpg"><p>XC90</p></a>
-<a href="xc70.html" class="model-card"><img src="images/xc70.jpg"><p>XC70</p></a>
-<a href="xc60.html" class="model-card"><img src="images/xc60.jpg"><p>XC60</p></a>
-<a href="v70.html" class="model-card"><img src="images/v70.jpg"><p>V70</p></a>
-<a href="s60.html" class="model-card"><img src="images/s60.jpg"><p>S60</p></a>
-<a href="s40.html" class="model-card"><img src="images/s40.jpg"><p>S40</p></a>
-<a href="v40.html" class="model-card"><img src="images/v40.jpg"><p>V40</p></a>
-<a href="c30.html" class="model-card"><img src="images/c30.jpg"><p>C30</p></a>
-<a href="850.html" class="model-card"><img src="images/850.jpg"><p>850</p></a>
+
+<div class="grid">
+<div class="card"><img src="images/xc90.jpg"><p>XC90</p></div>
+<div class="card"><img src="images/xc70.jpg"><p>XC70</p></div>
+<div class="card"><img src="images/xc60.jpg"><p>XC60</p></div>
+<div class="card"><img src="images/v70.jpg"><p>V70</p></div>
+<div class="card"><img src="images/s60.jpg"><p>S60</p></div>
+<div class="card"><img src="images/s40.jpg"><p>S40</p></div>
+<div class="card"><img src="images/v40.jpg"><p>V40</p></div>
+<div class="card"><img src="images/c30.jpg"><p>C30</p></div>
 </div>
 </section>
 
-<section id="find" class="find-part">
-
+<!-- REQUEST -->
+<section class="request">
+<img src="images/workshop.jpg">
+<div class="request-content">
 <h2>Find Your Volvo Part</h2>
-
-<div class="request-box">
-<select id="model">
-<option>XC90</option>
-<option>XC70</option>
-<option>XC60</option>
-<option>V70</option>
-<option>S60</option>
-<option>S40</option>
-<option>V40</option>
-<option>C30</option>
-<option>850</option>
-</select>
-
-<input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
-<textarea id="details" placeholder="Year, engine type, etc"></textarea>
-
-<button onclick="sendWhatsApp()">Request Part on WhatsApp</button>
+<a href="#" class="btn">Request Part on WhatsApp</a>
 </div>
-
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section class="contact">
 <h2>Contact VOLVOOM</h2>
-<p style="text-align:center;">
-<strong>Call:</strong> 078 255 1664<br>
-<strong>WhatsApp:</strong> 070 321 9420<br>
-<strong>Email:</strong> volvoom.oemparts@gmail.com<br>
-<strong>Facebook:</strong> 
-<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank">Follow VOLVOOM</a>
-</p>
+<p>Call: 078 255 1664</p>
+<p>WhatsApp: 070 321 9420</p>
+<p>Email: volvoom.oemparts@gmail.com</p>
 </section>
 
 <footer>
-<p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
+© 2026 VOLVOOM | Volvo New & Used OEM Parts
 </footer>
 
-<script>
-function sendWhatsApp(){
-let model=document.getElementById("model").value;
-let part=document.getElementById("part").value;
-let details=document.getElementById("details").value;
+<!-- FLOATING BUTTONS -->
+<div class="float whatsapp">
+<a href="https://wa.me/27703219420">💬</a>
+</div>
 
-let phone="27703219420";
-let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
-
-window.open("https://wa.me/"+phone+"?text="+message,"_blank");
-}
-</script>
-
-<!-- FLOAT BUTTONS -->
-<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank" class="facebook-float">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-<a href="https://wa.me/27703219420" class="whatsapp-float">
-<i class="fab fa-whatsapp"></i>
-</a>
+<div class="float facebook">
+<a href="#">f</a>
+</div>
 
 </body>
 </html>
