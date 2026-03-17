@@ -195,7 +195,7 @@ background:rgba(0,0,0,0.6);
 
 .find-part *{position:relative;}
 
-/* CLEAN FORM (FIXED) */
+/* CLEAN FORM */
 
 .request-box{
 background:transparent;
@@ -234,13 +234,12 @@ font-weight:bold;
 cursor:pointer;
 }
 
-/* FLOAT BUTTONS */
+/* FLOAT BUTTONS (FIXED) */
 
-.whatsapp-float{
+.whatsapp-float,
+.facebook-float{
 position:fixed;
-bottom:20px;
 right:20px;
-background:#25D366;
 width:60px;
 height:60px;
 display:flex;
@@ -249,20 +248,25 @@ justify-content:center;
 border-radius:50%;
 color:white;
 font-size:26px;
+text-decoration:none;
+z-index:9999; /* 🔥 THIS FIXES IT */
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:0.2s;
+}
+
+.whatsapp-float{
+bottom:20px;
+background:#25D366;
 }
 
 .facebook-float{
-position:fixed;
 bottom:90px;
-right:20px;
 background:#1877f2;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-color:white;
+}
+
+.whatsapp-float:hover,
+.facebook-float:hover{
+transform:scale(1.1);
 }
 
 /* FOOTER */
@@ -380,8 +384,14 @@ window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
 </script>
 
-<a href="https://www.facebook.com/share/1N9mPTcMDT/" class="facebook-float"><i class="fab fa-facebook-f"></i></a>
-<a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
+<!-- FLOAT BUTTONS -->
+<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank" class="facebook-float">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://wa.me/27703219420" class="whatsapp-float">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
