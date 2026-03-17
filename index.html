@@ -120,16 +120,11 @@ font-weight:bold;
 display:inline-block;
 }
 
-/* WHY (NOW CLEAN + INTEGRATED) */
+/* WHY */
 
 .hero .why{
 margin-top:35px;
 max-width:700px;
-padding:0;
-}
-
-.hero .why h2{
-margin-bottom:15px;
 }
 
 .hero .why ul{
@@ -200,16 +195,13 @@ background:rgba(0,0,0,0.6);
 
 .find-part *{position:relative;}
 
-/* FORM */
+/* CLEAN FORM (FIXED) */
 
 .request-box{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(6px);
-color:white;
+background:transparent;
 max-width:420px;
 margin:30px auto;
-padding:25px;
-border-radius:12px;
+padding:0;
 }
 
 .request-box input,
@@ -217,11 +209,29 @@ border-radius:12px;
 .request-box select{
 width:100%;
 margin-bottom:12px;
-padding:12px;
+padding:14px;
 border-radius:6px;
-background:rgba(255,255,255,0.15);
-border:1px solid rgba(255,255,255,0.3);
+border:1px solid rgba(255,255,255,0.5);
+background:transparent;
 color:white;
+font-size:15px;
+}
+
+.request-box input::placeholder,
+.request-box textarea::placeholder{
+color:rgba(255,255,255,0.7);
+}
+
+.request-box button{
+width:100%;
+padding:14px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* FLOAT BUTTONS */
@@ -237,6 +247,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
+color:white;
+font-size:26px;
 }
 
 .facebook-float{
@@ -354,6 +366,19 @@ padding:40px;
 <footer>
 <p>© 2026 VOLVOOM | Volvo New & Used OEM Parts</p>
 </footer>
+
+<script>
+function sendWhatsApp(){
+let model=document.getElementById("model").value;
+let part=document.getElementById("part").value;
+let details=document.getElementById("details").value;
+
+let phone="27703219420";
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
+
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
+}
+</script>
 
 <a href="https://www.facebook.com/share/1N9mPTcMDT/" class="facebook-float"><i class="fab fa-facebook-f"></i></a>
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
