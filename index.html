@@ -12,6 +12,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 html{
@@ -40,7 +43,6 @@ color:white;
 z-index:1000;
 }
 
-/* Logo */
 .logo{
 font-family:'Montserrat';
 font-size:22px;
@@ -49,14 +51,12 @@ color:white;
 font-weight:bold;
 }
 
-/* RIGHT ALIGNED NAV */
 .navbar nav{
 margin-left:auto;
 display:flex;
 gap:25px;
 }
 
-/* Links */
 .navbar nav a{
 color:white;
 text-decoration:none;
@@ -68,7 +68,6 @@ white-space:nowrap;
 color:#00c2ff;
 }
 
-/* ACTIVE LINK */
 .navbar nav a.active{
 color:#00c2ff;
 border-bottom:2px solid #00c2ff;
@@ -219,13 +218,11 @@ position:relative;
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(6px);
 -webkit-backdrop-filter:blur(6px);
-
 color:white;
 max-width:420px;
 margin:30px auto 0;
 padding:25px;
 border-radius:12px;
-
 border:none;
 box-shadow:none;
 }
@@ -237,7 +234,6 @@ width:100%;
 margin-bottom:12px;
 padding:12px;
 border-radius:6px;
-
 background:rgba(255,255,255,0.15);
 border:1px solid rgba(255,255,255,0.3);
 color:white;
@@ -246,10 +242,6 @@ color:white;
 .request-box input::placeholder,
 .request-box textarea::placeholder{
 color:rgba(255,255,255,0.7);
-}
-
-.request-box select{
-color:white;
 }
 
 .request-box button{
@@ -263,16 +255,7 @@ font-size:16px;
 cursor:pointer;
 }
 
-/* FOOTER */
-
-footer{
-background:#003057;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
-
-/* WHATSAPP FLOAT */
+/* FLOAT BUTTONS */
 
 .whatsapp-float{
 position:fixed;
@@ -288,6 +271,39 @@ align-items:center;
 justify-content:center;
 border-radius:50%;
 text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.facebook-float{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#1877f2;
+color:white;
+font-size:26px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* HOVER EFFECT */
+.whatsapp-float:hover,
+.facebook-float:hover{
+transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+background:#003057;
+color:white;
+text-align:center;
+padding:40px 20px;
 }
 
 </style>
@@ -335,7 +351,6 @@ text-decoration:none;
 
 <section id="models">
 <h2>Popular Volvo Models</h2>
-
 <div class="model-grid">
 <a href="xc90.html" class="model-card"><img src="images/xc90.jpg"><p>XC90</p></a>
 <a href="xc70.html" class="model-card"><img src="images/xc70.jpg"><p>XC70</p></a>
@@ -347,7 +362,6 @@ text-decoration:none;
 <a href="c30.html" class="model-card"><img src="images/c30.jpg"><p>C30</p></a>
 <a href="850.html" class="model-card"><img src="images/850.jpg"><p>850</p></a>
 </div>
-
 </section>
 
 <section id="find" class="find-part">
@@ -372,7 +386,6 @@ text-decoration:none;
 </select>
 
 <input type="text" id="part" placeholder="Example: Turbo, Headlight, Gearbox">
-
 <textarea id="details" placeholder="Year, engine type, etc"></textarea>
 
 <button onclick="sendWhatsApp()">Request Part on WhatsApp</button>
@@ -436,6 +449,11 @@ window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
 
 </script>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank" class="facebook-float">
+<i class="fab fa-facebook-f"></i>
+</a>
 
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
 
