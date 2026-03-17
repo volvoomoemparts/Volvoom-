@@ -36,16 +36,16 @@ top:0;
 left:0;
 width:100%;
 background:#003057;
-padding:15px 20px;
+padding:12px 15px;
 display:flex;
 align-items:center;
-color:white;
+flex-wrap:wrap;
 z-index:1000;
 }
 
 .logo{
 font-family:'Montserrat';
-font-size:22px;
+font-size:20px;
 text-decoration:none;
 color:white;
 font-weight:bold;
@@ -54,7 +54,9 @@ font-weight:bold;
 .navbar nav{
 margin-left:auto;
 display:flex;
-gap:25px;
+gap:15px;
+flex-wrap:wrap;
+justify-content:flex-end;
 }
 
 .navbar nav a{
@@ -62,6 +64,7 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 white-space:nowrap;
+font-size:14px;
 }
 
 .navbar nav a:hover{
@@ -72,6 +75,22 @@ color:#00c2ff;
 color:#00c2ff;
 border-bottom:2px solid #00c2ff;
 padding-bottom:4px;
+}
+
+/* MOBILE NAV FIX */
+@media(max-width:600px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.navbar nav{
+margin-left:0;
+margin-top:10px;
+justify-content:flex-start;
+}
+
 }
 
 /* HERO */
@@ -291,7 +310,6 @@ text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* HOVER EFFECT */
 .whatsapp-float:hover,
 .facebook-float:hover{
 transform:scale(1.1);
@@ -443,7 +461,7 @@ let part=document.getElementById("part").value;
 let details=document.getElementById("details").value;
 
 let phone="27703219420";
-let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
+let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
 
 window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
