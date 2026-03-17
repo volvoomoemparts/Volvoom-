@@ -24,14 +24,19 @@ color:#333;
 /* NAVBAR */
 
 .navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
 background:#003057;
 padding:15px 20px;
 display:flex;
-justify-content:space-between;
 align-items:center;
 color:white;
+z-index:1000;
 }
 
+/* Logo left */
 .logo{
 font-family:'Montserrat';
 font-size:22px;
@@ -40,9 +45,18 @@ color:white;
 font-weight:bold;
 }
 
+/* Center nav */
+.navbar nav{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:30px;
+}
+
+/* Links */
 .navbar nav a{
 color:white;
-margin-left:20px;
 text-decoration:none;
 font-weight:bold;
 }
@@ -62,7 +76,7 @@ display:flex;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
-padding:80px 20px 20px;
+padding:120px 20px 20px; /* FIXED for navbar */
 color:white;
 }
 
@@ -189,7 +203,7 @@ background:rgba(0,0,0,0.6);
 position:relative;
 }
 
-/* 🔥 FRAMELESS GLASS FORM */
+/* FORM */
 
 .request-box{
 background:rgba(255,255,255,0.08);
@@ -202,7 +216,6 @@ margin:30px auto 0;
 padding:25px;
 border-radius:12px;
 
-/* removed frame */
 border:none;
 box-shadow:none;
 }
@@ -279,7 +292,6 @@ text-decoration:none;
 <a href="#models">Catalog</a>
 <a href="#find">Request Part</a>
 <a href="#contact">Contact</a>
-<a href="https://wa.me/27703219420" target="_blank">WhatsApp</a>
 </nav>
 </header>
 
@@ -312,7 +324,6 @@ text-decoration:none;
 </section>
 
 <section id="models">
-
 <h2>Popular Volvo Models</h2>
 
 <div class="model-grid">
@@ -377,19 +388,16 @@ text-decoration:none;
 </footer>
 
 <script>
-
 function sendWhatsApp(){
 let model=document.getElementById("model").value;
 let part=document.getElementById("part").value;
 let details=document.getElementById("details").value;
 
 let phone="27703219420";
-
 let message="Hello VOLVOOM,%0A%0AI need a Volvo part.%0A%0AModel: "+model+"%0APart: "+part+"%0ADetails: "+details;
 
 window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
-
 </script>
 
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
