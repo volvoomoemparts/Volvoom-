@@ -1,1 +1,335 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOLVOOM | Volvo Parts Cape Town | New & Used OEM Volvo Spares</title>
+
+<meta name="description" content="VOLVOOM supplies new and used OEM Volvo parts in Cape Town. XC90, S60, V70, XC60 and more. Contact us on WhatsApp for fast Volvo spares in South Africa.">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:'Open Sans',sans-serif;
+background:#f4f7fa;
+color:#333;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#003057;
+padding:15px 15px; /* reduced side padding */
+display:flex;
+align-items:center;
+color:white;
+z-index:1000;
+}
+
+.logo{
+font-family:'Montserrat';
+font-size:22px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.navbar nav{
+margin-left:auto;
+display:flex;
+gap:15px; /* reduced gap */
+}
+
+.navbar nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+white-space:nowrap;
+font-size:14px; /* slight reduction for better fit */
+}
+
+.navbar nav a:hover{
+color:#00c2ff;
+}
+
+.navbar nav a.active{
+color:#00c2ff;
+border-bottom:2px solid #00c2ff;
+padding-bottom:4px;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+background:url('images/xc90.jpg') center/cover no-repeat;
+text-align:center;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
+padding:120px 20px 20px;
+color:white;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+.hero *{
+position:relative;
+}
+
+.hero-logo{
+width:520px;
+max-width:90%;
+margin-bottom:10px;
+filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6));
+}
+
+.hero h1{
+font-family:'Montserrat';
+font-size:36px;
+margin-bottom:8px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.cta-button{
+display:inline-block;
+margin-top:15px;
+background:#4CAF50;
+color:white;
+padding:15px 32px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 20px;
+}
+
+h2{
+text-align:center;
+font-family:'Montserrat';
+margin-bottom:20px;
+}
+
+/* WHY */
+
+.why{
+background:white;
+max-width:700px;
+margin:auto;
+border-radius:10px;
+padding:30px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* MODELS */
+
+.model-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+margin-top:30px;
+}
+
+.model-card{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-decoration:none;
+color:#333;
+transition:0.2s;
+}
+
+.model-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.model-card:hover{
+transform:scale(1.05);
+}
+
+/* FIND PART */
+
+.find-part{
+background:url('images/garage.jpg') center/cover no-repeat;
+color:white;
+text-align:center;
+padding:80px 20px;
+position:relative;
+}
+
+.find-part::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.find-part *{
+position:relative;
+}
+
+/* FORM */
+
+.request-box{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(6px);
+-webkit-backdrop-filter:blur(6px);
+color:white;
+max-width:420px;
+margin:30px auto 0;
+padding:25px;
+border-radius:12px;
+border:none;
+box-shadow:none;
+}
+
+.request-box input,
+.request-box textarea,
+.request-box select{
+width:100%;
+margin-bottom:12px;
+padding:12px;
+border-radius:6px;
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.3);
+color:white;
+}
+
+.request-box input::placeholder,
+.request-box textarea::placeholder{
+color:rgba(255,255,255,0.7);
+}
+
+.request-box button{
+width:100%;
+padding:14px;
+background:#003057;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* FLOAT BUTTONS */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.facebook-float{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#1877f2;
+color:white;
+font-size:26px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float:hover,
+.facebook-float:hover{
+transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+background:#003057;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+<a href="index.html" class="logo">VOLVOOM</a>
+<nav>
+<a href="#models">Catalog</a>
+<a href="#find">Request Part</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- REST OF YOUR PAGE UNCHANGED -->
+
+<!-- FLOATING BUTTONS -->
+<a href="https://www.facebook.com/share/1N9mPTcMDT/" target="_blank" class="facebook-float">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
+
+</body>
+</html>
