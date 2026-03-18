@@ -351,6 +351,7 @@ color:#00c2ff;
 }
 
 .popup-content{
+  position:relative;
   background:#fff;
   padding:20px;
   border-radius:12px;
