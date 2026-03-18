@@ -361,8 +361,8 @@ padding:40px 20px;
 <h1>Volvo OEM New & Used Parts</h1>
 <p>Specialists in XC90, XC70, XC60, V70, S60 and more</p>
 <p>Shipping Nationwide Across South Africa</p>
-
-<a href="#models" class="cta-button">Find Volvo Parts</a>
+  
+<a href="#" class="cta-button" onclick="openPopup()">Find Volvo Parts</a>
 <section>
 
 <h2>Why Choose VOLVOOM</h2>
@@ -489,5 +489,54 @@ window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
 
+<!-- Parts Finder Popup -->
+<div id="partsFinder" class="popup">
+  <div class="popup-content">
+    <h2>Find Volvo Parts</h2>
+
+    <input type="text" id="model" placeholder="Model (e.g XC70)">
+    <input type="text" id="year" placeholder="Year (e.g 2007)">
+    <input type="text" id="engine" placeholder="Engine Type (Petrol/Diesel)">
+    <input type="text" id="capacity" placeholder="Engine Capacity (e.g 2.9)">
+    
+    <select id="category">
+      <option value="">Select Part Category</option>
+      <option value="engine">Engine</option>
+      <option value="transmission">Transmission</option>
+      <option value="brakes">Brakes</option>
+      <option value="electrical">Electrical</option>
+      <option value="suspension">Suspension</option>
+    </select>
+
+    <button onclick="findParts()">Find Volvo Parts</button>
+    <span class="close" onclick="closePopup()">×</span>
+  </div>
+</div>
+
+<script>
+function openPopup(){
+  document.getElementById("partsFinder").style.display = "flex";
+}
+
+function closePopup(){
+  document.getElementById("partsFinder").style.display = "none";
+}
+
+function findParts(){
+  let model = document.getElementById("model").value.toLowerCase();
+  let category = document.getElementById("category").value;
+
+  if(model === "xc70" && category === "electrical"){
+    window.location.href = "xc70-electrical.html";
+  } 
+  else if(model === "xc70" && category === "engine"){
+    window.location.href = "xc70-engine.html";
+  }
+  else{
+    alert("Parts not found yet. Please request via WhatsApp.");
+  }
+}
+</script>
+  
 </body>
 </html>
