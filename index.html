@@ -490,6 +490,8 @@ window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 <a href="https://wa.me/27703219420" class="whatsapp-float">💬</a>
 
 <!-- Parts Finder Popup -->
+  
+<!-- Parts Finder Popup -->
 <div id="partsFinder" class="popup">
   <div class="popup-content">
     <h2>Find Volvo Parts</h2>
@@ -512,31 +514,6 @@ window.open("https://wa.me/"+phone+"?text="+message,"_blank");
     <span class="close" onclick="closePopup()">×</span>
   </div>
 </div>
-
-<script>
-function openPopup(){
-  document.getElementById("partsFinder").style.display = "flex";
-}
-
-function closePopup(){
-  document.getElementById("partsFinder").style.display = "none";
-}
-
-function findParts(){
-  let model = document.getElementById("model").value.toLowerCase();
-  let category = document.getElementById("category").value;
-
-  if(model === "xc70" && category === "electrical"){
-    window.location.href = "xc70-electrical.html";
-  } 
-  else if(model === "xc70" && category === "engine"){
-    window.location.href = "xc70-engine.html";
-  }
-  else{
-    alert("Parts not found yet. Please request via WhatsApp.");
-  }
-}
-</script>
   
 </body>
 </html>
