@@ -330,6 +330,38 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 transform:scale(1.1);
 }
 
+function openPopup(){
+  document.getElementById("partsFinder").style.display = "flex";
+}
+
+function closePopup(){
+  document.getElementById("partsFinder").style.display = "none";
+}
+
+function findParts(){
+  let model = document.getElementById("popup-model").value;
+  let year = document.getElementById("popup-year").value;
+  let engine = document.getElementById("popup-engine").value;
+  let capacity = document.getElementById("popup-capacity").value;
+  let category = document.getElementById("category").value;
+
+  let phone = "27703219420";
+
+  let message = "Hello VOLVOOM,%0A%0AI am looking for a Volvo part:%0A"
+  + "Model: " + model + "%0A"
+  + "Year: " + year + "%0A"
+  + "Engine: " + engine + "%0A"
+  + "Capacity: " + capacity + "%0A"
+  + "Category: " + category;
+
+  window.open("https://wa.me/"+phone+"?text="+message,"_blank");
+}
+
+/* 🔥 FORCE HIDE ON LOAD */
+window.onload = function(){
+  document.getElementById("partsFinder").style.display = "none";
+}
+
 /* FOOTER */
 
 footer{
