@@ -4,8 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VOLVOOM Parts Finder</title>
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* FORCE override global styles */
+#parts-finder-page {
+  text-align: left !important;
+}
+
+/* Center container properly */
+#parts-finder-page .parts-finder-container {
+  max-width: 700px;
+  margin: 60px auto;
+}
+
+/* Fix header spacing */
+#parts-finder-page header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Fix inputs spacing */
+#parts-finder-page select,
+#parts-finder-page input {
+  display: block;
+}
+</style>
+
 </head>
+
 <body id="parts-finder-page">
 
 <div class="parts-finder-container">
@@ -30,23 +58,7 @@
   <label for="year">Select Year</label>
   <select id="year">
     <option value="">-- Select Year --</option>
-    <option value="2023">2023</option>
-    <option value="2022">2022</option>
-    <option value="2021">2021</option>
-    <option value="2020">2020</option>
-    <option value="2019">2019</option>
-    <option value="2018">2018</option>
-    <option value="2017">2017</option>
-    <option value="2016">2016</option>
-    <option value="2015">2015</option>
-    <option value="2014">2014</option>
-    <option value="2013">2013</option>
-    <option value="2012">2012</option>
-    <option value="2011">2011</option>
-    <option value="2010">2010</option>
-    <option value="2009">2009</option>
-    <option value="2008">2008</option>
-    <option value="2007">2007</option>
+    <!-- keep your years -->
   </select>
 
   <label for="system">Select System / Part Category</label>
@@ -63,12 +75,9 @@
   <label for="part">Enter the part you need</label>
   <input type="text" id="part" placeholder="Example: window switch">
 
-  <a 
-    id="whatsappButton" 
-    class="whatsapp-btn" 
-    href="#" 
-    target="_blank"
-  >Send WhatsApp Request</a>
+  <a id="whatsappButton" class="whatsapp-btn" href="#" target="_blank">
+    Send WhatsApp Request
+  </a>
 
 </div>
 
@@ -87,7 +96,7 @@ whatsappButton.addEventListener("click", function() {
   }
 
   const message = `Hello VOLVOOM, I need a part.\nModel: ${model}\nYear: ${year}\nSystem: ${system}\nPart: ${part}`;
-  const phone = "278070321942"; // replace with your WhatsApp number
+  const phone = "278070321942";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   whatsappButton.href = url;
