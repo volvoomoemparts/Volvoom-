@@ -4,120 +4,115 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VOLVOOM Parts Finder</title>
+<link rel="stylesheet" href="style.css">
 <style>
-  /* General Reset */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
+/* ============================= */
+/* PARTS FINDER PAGE STYLES (Scoped) */
+/* ============================= */
+#parts-finder-page {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
 
-  body {
-    background-color: #f0f2f5;
-    color: #333;
-  }
+#parts-finder-page .parts-finder-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  text-align: left;
+}
 
-  header {
-    background-color: #000;
-    color: #fff;
-    padding: 25px 15px;
-    text-align: center;
-    border-bottom: 4px solid #25D366;
-  }
+#parts-finder-page header {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-  }
+#parts-finder-page header h1 {
+  font-size: 2rem;
+  color: #003057;
+  margin-bottom: 5px;
+}
 
-  header p {
-    font-size: 1rem;
-    color: #ccc;
-  }
+#parts-finder-page header p {
+  color: #555;
+  font-size: 1rem;
+}
 
-  .container {
-    max-width: 700px;
-    margin: 30px auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  }
+#parts-finder-page .back-link {
+  display: block;
+  margin-bottom: 25px;
+  color: #003057;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  .back-link {
-    display: block;
-    margin-bottom: 25px;
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-  }
+#parts-finder-page .back-link:hover {
+  text-decoration: underline;
+}
 
-  .back-link:hover {
-    text-decoration: underline;
-  }
+#parts-finder-page label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
 
-  label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    display: block;
-  }
+#parts-finder-page select,
+#parts-finder-page input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.3s;
+}
 
-  select, input[type="text"] {
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 18px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: 0.3s;
-  }
+#parts-finder-page select:focus,
+#parts-finder-page input[type="text"]:focus {
+  border-color: #25D366;
+  outline: none;
+}
 
-  select:focus, input[type="text"]:focus {
-    border-color: #25D366;
-    outline: none;
-  }
+#parts-finder-page .whatsapp-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background-color: #25D366;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
-  .whatsapp-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px 0;
-    background-color: #25D366;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
+#parts-finder-page .whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
 
-  .whatsapp-btn:hover {
-    background-color: #1ebe5d;
+@media(max-width: 700px){
+  #parts-finder-page .parts-finder-container {
+    margin: 30px 15px;
+    padding: 25px;
   }
-
-  /* Small visual icon for aesthetics */
-  .icon {
-    margin-right: 8px;
-  }
-
-  @media(max-width: 700px){
-    .container {
-      margin: 20px 15px;
-      padding: 25px;
-    }
-  }
+}
 </style>
 </head>
-<body>
+<body id="parts-finder-page">
 
-<header>
-  <h1>VOLVOOM Parts Finder</h1>
-  <p>Find the Volvo part you need instantly</p>
-</header>
+<div class="parts-finder-container">
 
-<div class="container">
+  <header>
+    <h1>VOLVOOM Parts Finder</h1>
+    <p>Find the Volvo part you need instantly</p>
+  </header>
+
   <a href="index.html" class="back-link">← Back to VOLVOOM</a>
 
   <label for="model">Select Volvo Model</label>
@@ -172,28 +167,29 @@
     href="#" 
     target="_blank"
   >Send WhatsApp Request</a>
+
 </div>
 
 <script>
-  const whatsappButton = document.getElementById("whatsappButton");
+const whatsappButton = document.getElementById("whatsappButton");
 
-  whatsappButton.addEventListener("click", function() {
-    const model = document.getElementById("model").value;
-    const year = document.getElementById("year").value;
-    const system = document.getElementById("system").value;
-    const part = document.getElementById("part").value;
+whatsappButton.addEventListener("click", function() {
+  const model = document.getElementById("model").value;
+  const year = document.getElementById("year").value;
+  const system = document.getElementById("system").value;
+  const part = document.getElementById("part").value;
 
-    if(!model || !year || !system || !part){
-      alert("Please fill all fields before sending a request.");
-      return;
-    }
+  if(!model || !year || !system || !part){
+    alert("Please fill all fields before sending a request.");
+    return;
+  }
 
-    const message = `Hello VOLVOOM, I need a part.\nModel: ${model}\nYear: ${year}\nSystem: ${system}\nPart: ${part}`;
-    const phone = "278070321942"; // replace with your WhatsApp number
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  const message = `Hello VOLVOOM, I need a part.\nModel: ${model}\nYear: ${year}\nSystem: ${system}\nPart: ${part}`;
+  const phone = "278070321942"; // replace with your WhatsApp number
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-    whatsappButton.href = url;
-  });
+  whatsappButton.href = url;
+});
 </script>
 
 </body>
